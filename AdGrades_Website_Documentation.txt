@@ -1,0 +1,1515 @@
+# AdGrades Website - Complete Documentation
+
+**Website URL:** https://adgrades.in/  
+**Last Updated:** 2025  
+**Company Founded:** May 2, 2023
+
+---
+
+## TABLE OF CONTENTS
+1. [Navigation & Header](#navigation--header)
+2. [Home Page](#home-page)
+3. [Services Page](#services-page)
+4. [Clients Page](#clients-page)
+5. [Signal Board (Portfolio)](#signal-board-portfolio)
+6. [About Us Page](#about-us-page)
+7. [Contact Us Page](#contact-us-page)
+8. [Careers Page](#careers-page)
+9. [Footer Section](#footer-section)
+10. [Company Information](#company-information)
+
+---
+
+## NAVIGATION & HEADER
+
+### Main Navigation Menu
+- **Home** 
+- **Services** - 
+- **Clients** - 
+- **Signal Board** - 
+- **About Us** - 
+- **Contact Us** - 
+- **Careers** - 
+
+### Header Components
+- **Logo:** AdGrades Logo (clickable, links to home)
+- **Dark Mode Toggle:** Available (Sun/Moon icon)
+- **CTA Button:** "Start a Project" (links to contact page)
+
+---
+
+## HOME PAGE
+
+### Hero Section
+- **Main Headline:** "Transform Your Digital Presence"
+- **Subheading:** "Elevate Your Brand with AdGrades"
+- **Description:** "At AdGrades startups and businesses build powerful digital marketing strategies that drive growth, engagement, and measurable results."
+- **CTA Buttons:**
+  - "Get Started Today" → contact us
+  - "View Our Work" → portfolio
+
+### Our Impact Section (Key Metrics)
+| Metric | Value |
+|--------|-------|
+| Happy Clients | 25+ |
+| Team Members | 15 |
+| Success Rate | 90% |
+| Years Experience | 2+ |
+
+### Our Services Section (6 Featured Services)
+
+#### 1. Social Media Marketing
+- **Icon:** 📱
+- **Description:** Build your brand presence across all major social platforms with engaging content and strategic campaigns.
+- **Features:**
+  - Content Strategy
+  - Community Management
+  - Paid Advertising
+  - Analytics & Reporting
+- **Link:** Explore Service → contact
+
+#### 2. Brand Design & Identity
+- **Icon:** 🎨
+- **Description:** Create a memorable brand identity that resonates with your target audience and sets you apart.
+- **Features:**
+  - Logo Design
+  - Brand Guidelines
+  - Visual Identity
+  - Marketing Materials
+- **Link:** Explore Service → contact
+
+#### 3. SEO & Content Marketing
+- **Icon:** 🔍
+- **Description:** Improve your search rankings and drive organic traffic with our proven SEO strategies.
+- **Features:**
+  - Keyword Research
+  - On-page SEO
+  - Content Creation
+  - Link Building
+- **Link:** Explore Service →contact
+
+#### 4. Email Marketing
+- **Icon:** 📧
+- **Description:** Nurture leads and retain customers with personalized email campaigns that convert.
+- **Features:**
+  - Campaign Design
+  - Automation
+  - Segmentation
+  - A/B Testing
+- **Link:** Explore Service → contact
+
+#### 5. Web Development
+- **Icon:** 💻
+- **Description:** Build fast, responsive, and user-friendly websites that drive conversions.
+- **Features:**
+  - Custom Development
+  - E-commerce
+  - Mobile Optimization
+  - CMS Integration
+- **Link:** Explore Service → contact
+
+#### 6. Performance Marketing
+- **Icon:** 📊
+- **Description:** Maximize your ROI with data-driven advertising campaigns across multiple platforms.
+- **Features:**
+  - Google Ads
+  - Facebook Ads
+  - Campaign Optimization
+  - ROI Tracking
+- **Link:** Explore Service → contact
+
+**View All Services Link:** services
+
+### Why Choose AdGrades Section
+
+| Feature | Description |
+|---------|-------------|
+| 🎯 Targeted Strategies | We create customized marketing strategies that align with your business goals and target audience. |
+| 📈 Proven Results | Our track record speaks for itself - we've helped numerous businesses achieve significant growth. |
+| 🤝 Dedicated Support | Get personalized attention from our expert team with 24/7 support and regular strategy sessions. |
+| 💡 Innovation Focused | We stay ahead of digital trends and use cutting-edge tools to keep your brand competitive. |
+| 📊 Data-Driven Approach | Every decision is backed by data and analytics to ensure maximum return on investment. |
+| ⚡ Fast Execution | Quick turnaround times without compromising quality - see results faster than ever. |
+
+### Our Process Section
+
+| Step | Title | Description |
+|------|-------|-------------|
+| 01 | Discovery | We start by understanding your business, goals, and target audience to create a solid foundation. |
+| 02 | Strategy | Develop a comprehensive digital marketing strategy tailored to your specific needs and objectives. |
+| 03 | Execution | Implement the strategy with precision, creativity, and attention to detail across all channels. |
+| 04 | Optimization | Continuously monitor, analyze, and optimize campaigns for maximum performance and ROI. |
+
+### Trusted Partners Section (12 Clients)
+
+| Client Name | Industry |
+|------------|----------|
+| OS CODE Solutions | IT Solutions |
+| Delhi 65 | Restaurant |
+| Medhavi Classes | Education |
+| Uplifto | IT Services |
+| Vinayaka Enterprises | Interior Design |
+| M K Streetwear | Fashion |
+| Adhyayan | Education |
+| Dew Drop Homestay | Hospitality |
+| Nataraj Dance Studios | Entertainment |
+| Pureblend Foods | Food & Beverage |
+| AS Tech Industries | Engineering |
+| SP Enterprises | Heavy Equipment |
+
+**View Our Portfolio Link:** portfolio
+
+### Testimonials Section (14 Client Testimonials)
+
+1. **Pranav Jha** - Owner, Medhavi Classes
+   - "Ad Grades has been instrumental in boosting our digital reach. Their team truly understands the education sector. We've seen a sharp rise in engagement and visibility. Highly professional and results-driven service."
+
+2. **Shreyas Bhadani** - Owner, Delhi 65 Restaurant
+   - "We started with zero online presence. Ad Grades built our brand identity from scratch. Now, our restaurant is recognized both online and offline. Couldn't have asked for a better marketing partner."
+
+3. **Abhishek** - Owner, Natraj Studios
+   - "Ad Grades helped shape our creative brand online. Their strategies brought in real clients and recognition. They captured our studio's essence beautifully. A dependable and creative team to work with."
+
+4. **Harsh Kumar** - Co-founder, OS Code
+   - "Ad Grades gave our brand a clear voice in the digital space. Their strategies were sharp, effective, and well-aligned with our goals. We saw real traction across platforms in a short time. Truly impressed with their expertise."
+
+5. **Suresh** - Manager, Dewdrop Homestays
+   - "We went from being hidden to fully booked. Ad Grades brought in real customers through smart ads. They told our story in a way people connected with. Thanks to them, every weekend is now packed."
+
+6. **Arun** - Founder, Brahma Kalasha
+   - "AdGrades completely transformed our brand presence in a highly competitive food market. From creative campaigns to targeted ads, they brought real footfall and inquiries. The team worked like an in-house partner fast, responsive, and always strategic."
+
+7. **Prakul** - Director, SP Enterprises
+   - "In a niche B2B category like ours, quality leads matter more than volume and AdGrades delivered both. Their marketing and tech setup helped streamline our lead funnel and improved conversion quality significantly."
+
+8. **Rajat** - Managing Partner, AS Tech Industries
+   - "We used to rely only on referrals. With AdGrades, we finally built a digital footprint that brings consistent business inquiries. Their strategy, website execution, and lead campaigns are top-notch."
+
+9. **Adhyayan Founder** - Founder, Adhyayan
+   - "AdGrades helped us scale our digital presence and generate qualified student inquiries regularly. Their content ideas and ad systems are simple, effective, and built for long-term growth."
+
+10. **Nagarathna** - Director, Vinayaka Enterprises
+    - "From brand identity to website and lead generation AdGrades managed everything end-to-end beautifully. Our online presence finally reflects our premium quality work."
+
+11. **Aditya** - Founder, M K Streetwear
+    - "They didn't just promote our brand they helped build it from scratch. Killer creative direction, sharp strategy, and timely execution. Highly recommend for D2C brands."
+
+12. **Prakul** - Founder, PureBlend Foods
+    - "Scaling a B2B food supply brand online isn't easy but AdGrades made it look effortless. Their branding, website, and lead strategy helped us get consistent inquiries from restaurants and hotels."
+
+13. **Rajath** - Partner, Crafted Vector Cut
+    - "AdGrades helped us present our handcrafted metal art in the most premium way online. Our conversions improved dramatically because our brand now looks as premium as our product."
+
+14. **Bon Millette Founder** - Founder, Bon Millette
+    - "Branding, content, and product storytelling everything was handled so professionally. The team understands how to create trust and appeal in FMCG food brands, especially in the health segment."
+
+### Ready to Grow Section (CTA)
+- **Headline:** "Ready to Grow Your Business?"
+- **Subheading:** "Let's Create Something Amazing Together"
+- **Description:** "Join hundreds of successful businesses that trust AdGrades for their digital marketing needs. Get a free consultation today!"
+- **CTA Buttons:**
+  - "Start Your Project" → contact
+  - "Schedule a Call" → https://calendly.com/chandanbkrishna077/adgrades
+- **Benefits Listed:**
+  - Free initial consultation
+  - Custom strategy development
+  - No long-term contracts
+  - Dedicated account manager
+
+---
+
+## SERVICES PAGE
+
+### Page Header
+- **Badge:** "Premium Services"
+- **Main Headline:** "Elevate Your Digital Presence"
+- **Description:** "From concept to launch, we deliver exceptional digital solutions that drive growth, enhance user experience, and transform your business."
+- **CTA Buttons:**
+  - "Start Your Project" → contact
+  - "View Our Work" → clients
+
+### Service Categories Filter
+- All Services (14 services)
+- Digital Marketing
+- Software Solutions
+- Offline Marketing
+
+### 14 Premium Services
+
+---
+
+#### 1. Social Media Management & Marketing
+**Category:** Digital Marketing
+
+**Description:** End-to-end social media management (strategy → posts → scheduling → community → reporting). Reel production billed separately.
+
+**Full Description:** Built for sustainable growth (not trends-for-trends' sake). We plan content pillars, design static creatives, write on-brand captions, schedule consistently, manage a defined community window, and report actionable insights monthly.
+
+**Features:**
+- On-brand captions & optimized hashtag sets
+- Monthly content calendar (themes & pillars)
+- Monthly performance report & insights
+
+**Benefits:**
+- Consistent brand presence
+- Higher engagement & saves
+- Clear content strategy (pillars & hooks)
+- Time-saving execution
+- Actionable monthly insights
+
+**Technologies:** Instagram, Facebook, LinkedIn, Twitter, Canva, Adobe Creative Suite, Hootsuite
+
+**Pricing:**
+| Tier | Price |
+|------|-------|
+| Basic | ₹12,999/month |
+| Premium | ₹26,999/month |
+| Enterprise | ₹42,999/month |
+
+**Deliverables:**
+- Monthly content calendar (themes & pillars)
+- 12–20 static posts/month (tier-dependent)
+- 8–16 story frames/month (tier-dependent)
+- Captions + hashtag sets per post
+- Community management window (Mon–Fri)
+- Monthly performance report (insights & actions)
+- 1–3 revision rounds per creative (tier-dependent)
+- Strategy calls (1–4/month, tier-dependent)
+
+**Timeline:** Ongoing monthly service
+
+---
+
+#### 2. Meta & Google Ads (Performance Marketing)
+**Category:** Digital Marketing
+
+**Description:** ROI-focused ad management on Meta and/or Google with structured testing and clean attribution.
+
+**Full Description:** We set up tracking correctly, build clean account structures, run experiments, and optimize weekly for measurable results. Creative variants and copy are included; brand-new video production is billed via Video Editing SKUs.
+
+**Features:**
+- Weekly optimization & pacing
+- A/B testing & learnings (by tier)
+- Clear KPI reporting & next-month plan
+- Light dashboard (enterprise tier)
+
+**Benefits:**
+- Measurable ROI and CAC control
+- Faster learnings via structured tests
+- Scalable account architecture
+- Transparent reporting
+
+**Technologies:** Google Ads, Facebook Ads Manager, Instagram Ads, Google Analytics, Conversion Tracking, Pixel/Tag Implementation
+
+**Pricing:**
+| Tier | Price |
+|------|-------|
+| Basic | ₹18,000/month (≤ ₹40,000 ad spend) |
+| Premium | ₹30,000/month (≤ ₹80,000 ad spend) |
+| Enterprise | ₹50,000/month (≤ ₹1,20,000 ad spend) + ₹1,500 per extra ₹10,000 spend |
+
+**Deliverables:**
+- Tracking setup (pixels/GA4/conversions)
+- Campaign structure & audiences (tier-dependent volume)
+- 8–30 ad creatives/month (variants; production billed separately)
+- Weekly optimization & pacing
+- Experimentation plan & A/B tests (by tier)
+- Monthly KPI report + next-month action plan
+- Light Looker/Sheets dashboard (enterprise)
+
+**Timeline:** Ongoing monthly service
+
+---
+
+#### 3. Video Editing
+**Category:** Digital Marketing
+
+**Description:** Reels, ads, and explainers with clear edit tiers, multi-ratio exports, and revision caps.
+
+**Full Description:** Choose Basic for clean social edits, Intermediate for motion/graphics & extra aspect ratios, or commission Commercial Ads and Animated Explainers for higher-impact assets.
+
+**Features:**
+- Clean cuts, pacing, color balance
+- Hard/Styled captions (tier-dependent)
+- Music & basic audio mix
+- Motion text, speed ramps, light masking (Intermediate)
+
+**Benefits:**
+- On-brand, scroll-stopping videos
+- Predictable turnaround
+- Revision caps to protect timelines
+- Multi-platform delivery
+
+**Technologies:** Adobe Premiere Pro, After Effects, Final Cut Pro, DaVinci Resolve, Canva Video
+
+**Pricing:**
+| Tier | Price |
+|------|-------|
+| Basic Reel ≤60s | ₹1,500 (61–120s: ₹2,500) |
+| Intermediate Reel ≤60s | ₹3,500 (61–120s: ₹6,000) |
+| Commercial Ad | from ₹25,000 |
+| Explainer | from ₹20,000/min |
+
+**Deliverables:**
+- Edit from raw footage, basic color balance
+- Captions: simple (Basic) or styled/dynamic (Intermediate)
+- 1 royalty-free music track + basic audio leveling
+- Motion text/speed ramps/light masking (Intermediate)
+- Up to 2 SFX (Intermediate)
+- Exports: 9:16 (Basic); +1 extra ratio (1:1 or 16:9) for Intermediate
+- Revisions: 1 round (Basic), 2 rounds (Intermediate)
+- Commercial Ad: script (30–45s), edit, master + 1 cutdown
+- Explainer: script, VO direction (talent fee extra), animation, Full-HD master + .srt
+
+**Timeline:** 2–3 business days per reel; project-based for Ads/Explainers
+
+---
+
+#### 4. Content Marketing / Writing
+**Category:** Digital Marketing
+
+**Description:** SEO-optimized content creation for blogs, social media, and email marketing
+
+**Features:**
+- SEO-optimized blog posts
+- Social media captions
+- Ad copies
+- Email newsletters
+- Topic research
+- Keyword planning
+- Competitor analysis
+- Performance reports
+
+**Pricing:**
+| Tier | Price |
+|------|-------|
+| Basic | ₹4,999/month |
+| Premium | ₹7,999/month |
+| Enterprise | ₹11,999/month |
+
+**Deliverables:**
+- Blog posts
+- Social media content
+- Email newsletters
+- Content calendar
+- Performance reports
+
+**Timeline:** Ongoing monthly service
+
+---
+
+#### 5. Email Marketing
+**Category:** Digital Marketing
+
+**Description:** Professional email marketing campaigns with automation and analytics
+
+**Features:**
+- Campaign emails
+- Template design
+- A/B testing
+- List segmentation
+- Email automation
+- CRM integration
+- Performance reporting
+
+**Pricing:**
+| Tier | Price |
+|------|-------|
+| Basic | ₹3,999/month |
+| Premium | ₹6,999/month |
+| Enterprise | ₹10,999/month |
+
+**Deliverables:**
+- Email campaigns
+- Template designs
+- Automation workflows
+- Performance reports
+- List management
+
+**Timeline:** Ongoing monthly service
+
+---
+
+#### 6. Performance Marketing (Cross-Channel ROI)
+**Category:** Digital Marketing
+
+**Description:** Cross-channel ads with testing discipline, attribution hygiene, and weekly optimizations.
+
+**Features:**
+- Meta + Google campaigns (tier-dependent scope)
+- A/B testing (creative/audience/placement)
+- Attribution hygiene: GA4 + UTMs
+- Light dashboard (enterprise)
+- Landing-page feedback & simple lead routing (Pro+)
+
+**Pricing:**
+| Tier | Price |
+|------|-------|
+| Basic | ₹18,000/month (≤ ₹40,000 ad spend) |
+| Premium | ₹30,000/month (≤ ₹80,000 ad spend) |
+| Enterprise | ₹50,000/month (≤ ₹1,20,000 ad spend) + ₹1,500 per extra ₹10,000 spend |
+
+**Timeline:** Ongoing monthly service
+
+---
+
+#### 7. Lead Generation
+**Category:** Digital Marketing
+
+**Description:** Comprehensive lead generation with custom forms and multi-channel outreach
+
+**Features:**
+- Verified leads
+- Custom form design
+- Lead filtering
+- CRM integration
+- Lead qualification
+- Omnichannel outreach
+- Lead scoring
+- Performance tracking
+
+**Pricing:**
+| Tier | Price |
+|------|-------|
+| Basic | ₹5,999/month |
+| Premium | ₹8,999/month |
+| Enterprise | ₹12,999/month |
+
+**Timeline:** Ongoing monthly service
+
+---
+
+#### 8. Web Development
+**Category:** Software Solutions
+
+**Description:** From 5-page sites to CMS and premium builds, with maintenance SLAs.
+
+**Full Description:** We deliver responsive, performant websites with clear scope by tier. All plans include on-page SEO baseline, analytics, and a maintenance SLA covering updates, backups, and security.
+
+**Features:**
+- On-page SEO (meta/alt) + sitemap/robots
+- GA4 setup + basic events
+- Staging, QA, and cross-browser checks (Premium)
+
+**Pricing:**
+| Tier | Build Price | Maintenance |
+|------|-------------|-------------|
+| Basic | ₹19,999 (One-time) | ₹1,500/month |
+| Standard | ₹34,999 (One-time, CMS) | ₹2,500/month |
+| Premium | ₹59,999 (One-time) | ₹3,500/month |
+
+**Deliverables:**
+- Pages: up to 5 / 10 / 20 (tier-dependent)
+- Component library & branded sections (CMS+)
+- Contact/lead form + WhatsApp integration
+- On-page SEO baseline (titles/meta/alt) + sitemap/robots
+- GA4 setup + basic events
+- Revision rounds: 1 / 2 / 3 (tier-dependent)
+- Maintenance: backups, updates, security + 1–3 hrs content edits/month (by tier)
+
+**Timeline:** 2–6 weeks
+
+---
+
+#### 9. SEO Optimization
+**Category:** Software Solutions
+
+**Description:** Comprehensive SEO services to improve search rankings and organic traffic
+
+**Features:**
+- Keyword research
+- On-page SEO
+- Off-page SEO
+- Technical SEO
+- Local SEO
+- Content optimization
+- Backlink building
+- Performance tracking
+
+**Technologies:** Google Analytics, Search Console, SEMrush, Ahrefs, Screaming Frog, GTM
+
+**Pricing:**
+| Tier | Price |
+|------|-------|
+| Basic | ₹4,999/month |
+| Premium | ₹8,999/month |
+| Enterprise | ₹14,999/month |
+
+**Timeline:** 3-6 months to see results
+
+---
+
+#### 10. Mobile App Development
+**Category:** Software Solutions
+
+**Description:** Native and cross-platform mobile apps for Android and iOS
+
+**Features:**
+- Android app development
+- iOS app development
+- Hybrid app development
+- UI design
+- API connectivity
+- Backend integration
+- Admin panels
+- Store deployment
+- Advanced features
+
+**Technologies:** Flutter, React Native, Android Studio, Xcode, Firebase, Node.js, Django
+
+**Pricing:**
+| Tier | Price |
+|------|-------|
+| Basic | ₹39,999+ (One-time) |
+| Premium | ₹74,999+ (One-time) |
+| Enterprise | ₹1,25,000+ (One-time) |
+
+**Timeline:** 6-16 weeks
+
+---
+
+#### 11. E-commerce Solutions
+**Category:** Software Solutions
+
+**Description:** Conversion-ready stores with payments, shipping rules, catalogs, and growth analytics.
+
+**Features:**
+- Inventory & order management flows
+- Facebook/Google product catalogs
+- Analytics (GA4 + conversions)
+- Training & maintenance SLA
+
+**Technologies:** WooCommerce, Shopify, Payment gateways, Inventory systems, Analytics tools
+
+**Pricing:**
+| Tier | Price |
+|------|-------|
+| Basic | ₹74,999+ (One-time build) + ₹6,000/month maintenance + 2% of sales (min ₹10,000/month) |
+| Premium | Scope-based: advanced catalog/integrations (ask for quote) |
+| Enterprise | Scope-based: multi-store/headless/SLA (ask for quote) |
+
+**Deliverables:**
+- Store setup & theme customization
+- Payments, taxes, shipping rules, order emails
+- Catalog: up to 100 SKUs initial load
+- Product template with CRO elements (reviews, trust badges)
+- Facebook/Google product catalog sync
+- Analytics (GA4 + conversions) & basic dashboards
+- 2 × 60-min admin training
+- Maintenance: security/updates/backups + 3 hrs/mo catalog/support
+
+**Timeline:** 3–8 weeks
+
+---
+
+#### 12. CRM & ERP Development
+**Category:** Software Solutions
+
+**Description:** Custom CRM and ERP solutions for business process automation
+
+**Features:**
+- Lead/contact tracking
+- Inventory management
+- Sales automation
+- HR management
+- Invoicing
+- Task automation
+- Role-based access
+- Custom reports
+- Third-party integration
+- Real-time analytics
+
+**Pricing:**
+| Tier | Price |
+|------|-------|
+| Basic | ₹49,999+ (One-time) |
+| Premium | ₹99,999+ (One-time) |
+| Enterprise | ₹1,75,000+ (One-time) |
+
+**Timeline:** 8-20 weeks
+
+---
+
+#### 13. Event Marketing & Brand Activations
+**Category:** Offline Marketing
+
+**Description:** Brand activations and event marketing from small stalls to large-scale events
+
+**Features:**
+- Brand stalls
+- Promotional staff
+- Custom booth design
+- Live engagement activities
+- Branded merchandise
+- Lead capture
+- Event photography
+- Video coverage
+- Social media promotion
+
+**Pricing:**
+| Tier | Price |
+|------|-------|
+| Basic | ₹24,999/event |
+| Premium | ₹49,999/event |
+| Enterprise | ₹89,999/event |
+
+**Timeline:** 1-4 weeks planning + event day
+
+---
+
+#### 14. Hoardings & Outdoor Ads
+**Category:** Offline Marketing
+
+**Description:** Outdoor advertising solutions including hoardings, banners, and highway displays
+
+**Features:**
+- Local hoardings
+- Highway displays
+- Flex banners
+- LED displays
+- Location selection
+- Design and printing
+- Installation service
+- Visibility reporting
+- Campaign photography
+
+**Pricing:**
+| Tier | Price |
+|------|-------|
+| Basic | ₹14,999/month |
+| Premium | ₹29,999/month |
+| Enterprise | ₹59,999+/month |
+
+**Timeline:** 1-2 weeks setup + campaign duration
+
+---
+
+### Service Packages for 2025
+
+#### 1. Brand Kickstart
+- **Description:** Launch-ready bundle combining social media, video and ad management for growing brands.
+- **Investment:** ₹47,999/month
+- **Savings:** Save ₹3,000 vs actual pricing
+- **Includes:**
+  - SMMA Pro (₹26,999)
+  - 4 Basic Reels (₹6,000 total)
+  - Performance Marketing Basic (₹18,000)
+
+#### 2. Growth Engine
+- **Description:** Scale your performance with advanced social, video, and ads support every month.
+- **Investment:** ₹74,999/month
+- **Savings:** Save ₹3,000 vs individual services
+- **Includes:**
+  - SMMA Pro (₹26,999)
+  - 6 Intermediate Reels (₹21,000 total)
+  - Performance Marketing Pro (₹30,000)
+
+#### 3. Performance+
+- **Description:** High-impact performance marketing complemented by consistent content and social support.
+- **Investment:** ₹60,999/month
+- **Savings:** Save ₹3,000 with this bundle
+- **Includes:**
+  - Performance Marketing Superb (₹50,000)
+  - SMMA Basic (₹12,999)
+  - 4 Basic Reels (₹6,000 total)
+
+#### 4. Content Studio
+- **Description:** Content-heavy plan for brands that need a steady stream of high-quality video and social posts.
+- **Investment:** ₹59,999/month
+- **Savings:** Save ₹5,000 on content production
+- **Includes:**
+  - SMMA Basic (₹12,999)
+  - 12 Basic Reels (₹18,000 total)
+  - 4 Intermediate Reels (₹14,000 total)
+  - 1 Explainer Video (₹20,000)
+
+#### 5. Website Launch
+- **Description:** Launch your new site with ongoing marketing, content, and maintenance support built in.
+- **Investment:** First Month: ₹69,999 | Ongoing: ₹38,999/month
+- **Includes:**
+  - Website Standard (₹34,999 build + ₹2,500/month maintenance)
+  - SMMA Basic (₹12,999)
+  - 2 Intermediate Reels (₹7,000 total)
+  - Performance Marketing Basic (₹18,000)
+
+#### 6. E-Com Launch & Scale
+- **Description:** End-to-end package for launching and scaling an e-commerce business with managed growth.
+- **Investment:** First Month: ₹1,49,999 | Ongoing: ₹79,999/month + 2% of sales (minimum ₹10,000)
+- **Includes:**
+  - E-commerce Website (₹74,999 build + ₹6,000/month maintenance)
+  - Performance Marketing Pro (₹30,000)
+  - SMMA Pro (₹26,999)
+  - 6 Intermediate Reels (₹21,000 total)
+
+### Service Process Steps
+
+| Step | Title | Description |
+|------|-------|-------------|
+| 01 | Discovery & Planning | We start by understanding your business goals, target audience, and project requirements through detailed consultation and research. |
+| 02 | Strategy & Design | Our team creates a comprehensive strategy and design mockups that align with your brand and user experience goals. |
+| 03 | Development & Testing | We build your solution using best practices, with regular testing and quality assurance throughout the process. |
+| 04 | Launch & Support | After successful launch, we provide ongoing support, monitoring, and optimization to ensure continued success. |
+
+### Service FAQs
+
+1. **How long does a typical project take?**
+   Project timelines vary depending on scope and complexity. Web development projects typically take 6-16 weeks, while marketing campaigns are ongoing monthly services. We provide detailed timelines during the consultation phase.
+
+2. **Do you provide ongoing support after project completion?**
+   Yes! We offer various support packages including maintenance, updates, and technical support. Most projects include 3-6 months of initial support, with extended support available.
+
+3. **Can you work with our existing team?**
+   Absolutely! We often collaborate with in-house teams and can integrate seamlessly into your existing workflows. We're flexible in our approach to match your needs.
+
+4. **What's included in your pricing?**
+   Our pricing includes all development work, testing, documentation, and initial support. We provide transparent pricing with no hidden fees. Additional services like hosting or third-party integrations are clearly outlined.
+
+5. **Do you sign NDAs and ensure data security?**
+   Yes, we take confidentiality and security very seriously. We're happy to sign NDAs and follow strict security protocols to protect your sensitive information and intellectual property.
+
+---
+
+## CLIENTS PAGE
+
+### 12 Featured Clients with Case Studies
+
+---
+
+#### 1. OS CODE Solutions
+- **Industry:** IT Solutions
+- **Duration:** 4 months
+- **Services:** Brand Identity Design, Social Media Marketing, Web Development
+
+**About:**
+OS Code Solutions is a tech-driven company offering smart digital solutions for businesses looking to scale and streamline. From custom software and ERP systems to automation and workflow optimization, they specialize in turning complex operational needs into seamless digital processes.
+
+**How We Helped:**
+Ad Grades teamed up with OS Code Solutions to translate their technical expertise into a compelling online presence. Through strategic Social Media Management and Lead Generation campaigns, we delivered high-quality leads while strengthening brand positioning.
+
+**Results:**
+| Metric | Value |
+|--------|-------|
+| Brand Recognition | 150% increase |
+| Website Traffic | 200% growth |
+| Social Engagement | 300% increase |
+
+**Testimonial:**
+"AdGrades transformed our digital presence completely. Their creative approach and technical expertise helped us stand out in the competitive IT market." — Founder, OS CODE Solutions
+
+---
+
+#### 2. Delhi 65 – Ranchi Restaurant
+- **Industry:** Food & Beverage
+- **Duration:** 3 months
+- **Services:** Social Media Marketing, Performance Advertising, Brand Photography
+
+**About:**
+Delhi 65 is a vibrant multicuisine restaurant known for its diverse flavors and welcoming atmosphere. Offering a rich blend of North Indian, South Indian, Chinese, and continental dishes.
+
+**How We Helped:**
+We worked closely with Delhi 65 to bring their brand to life online through dynamic Social Media Management and focused Targeted Ad Campaigns. Our creative content captured the essence of their cuisine and ambiance.
+
+**Results:**
+| Metric | Value |
+|--------|-------|
+| Footfall | 180% increase |
+| Online Orders | 250% growth |
+| Instagram Followers | 400% increase |
+
+**Testimonial:**
+"Our restaurant's popularity soared after partnering with AdGrades. Their social media campaigns brought in so many new customers!" — Owner, Delhi 65
+
+---
+
+#### 3. Medhavi Classes
+- **Industry:** Education
+- **Duration:** 6 months
+- **Services:** Digital Marketing, Student Acquisition, Content Strategy
+
+**About:**
+Medhavi Classes is a modern educational platform dedicated to transforming how students learn. By focusing on practical understanding rather than rote memorization, Medhavi helps students develop strong foundational clarity.
+
+**How We Helped:**
+Ad Grades joined hands with Medhavi Classes to turn their powerful educational mission into a strong digital brand with end-to-end Social Media Management and Lead Generation strategies.
+
+**Results:**
+| Metric | Value |
+|--------|-------|
+| Student Enrollments | 400% increase |
+| Social Following | 250% growth |
+| Engagement Rate | 300% increase |
+
+**Testimonial:**
+"AdGrades' marketing strategies helped us reach more students than ever before. Our enrollments quadrupled within months!" — Director, Medhavi Classes
+
+---
+
+#### 4. Uplifto
+- **Industry:** IT Services
+- **Duration:** 4 months
+- **Services:** Lead Generation, Social Media Management, B2B Marketing
+
+**About:**
+Uplifto is a modern hybrid agency that merges digital creativity with smart business tech to help brands grow with purpose.
+
+**How We Helped:**
+At Ad Grades, we helped Uplifto sharpen their brand voice and expand their outreach with strategic Social Media Management and Lead Generation.
+
+**Results:**
+| Metric | Value |
+|--------|-------|
+| B2B Leads | 300% increase |
+| Conversion Rate | 200% improvement |
+| Market Presence | 350% expansion |
+
+**Testimonial:**
+"The lead generation campaigns designed by AdGrades transformed our business development approach and brought us high-value clients." — CEO, Uplifto
+
+---
+
+#### 5. Vinayaka Enterprises
+- **Industry:** Interior Design
+- **Duration:** 5 months
+- **Services:** Website Development, Business Strategy, Social Media Management, Business Development
+
+**About:**
+Vinayaka Enterprises is an innovative Interior Design Studio that blends aesthetics with function to create spaces that inspire.
+
+**How We Helped:**
+Ad Grades partnered with Vinayaka Enterprises to strengthen their digital and strategic presence from the ground up with Website Development and Business Strategy support.
+
+**Results:**
+| Metric | Value |
+|--------|-------|
+| Project Inquiries | 250% increase |
+| Online Presence | 400% growth |
+| Client Value | 200% increase |
+
+**Testimonial:**
+"AdGrades transformed our business approach. Their strategic guidance and digital marketing expertise helped us attract premium clients and grow our studio." — Founder, Vinayaka Enterprises
+
+---
+
+#### 6. M K Streetwear
+- **Industry:** Fashion
+- **Duration:** 6 months
+- **Services:** Brand Strategy Development, Social Media Management, Website Development, Business Development
+
+**About:**
+MK Streetwear is a rising online fashion brand redefining urban style with bold designs and uncompromising attitude.
+
+**How We Helped:**
+Ad Grades worked with MK Streetwear to shape a bold identity. We led their Brand Strategy Development, designed a sleek Website, and managed their Social Media.
+
+**Results:**
+| Metric | Value |
+|--------|-------|
+| Online Sales | 500% increase |
+| Social Following | 400% growth |
+| Brand Recognition | 350% improvement |
+
+**Testimonial:**
+"AdGrades understood our vision perfectly. Their brand strategy and social media approach helped us stand out in the crowded fashion market." — Founder, M K Streetwear
+
+---
+
+#### 7. Adhyayan
+- **Industry:** Education
+- **Duration:** 3 months
+- **Services:** Social Media Management, Content Marketing, Student Acquisition
+
+**About:**
+Adhyayan is a coaching and motivation platform dedicated to empowering students and young individuals with clarity, mindset, and direction.
+
+**How We Helped:**
+Ad Grades partnered with Adhyayan to transform their vision into a consistent and powerful digital presence through tailored Social Media Management.
+
+**Results:**
+| Metric | Value |
+|--------|-------|
+| Student Inquiries | 250% increase |
+| Content Engagement | 300% growth |
+| Brand Authority | 200% improvement |
+
+**Testimonial:**
+"The social media strategy developed by AdGrades helped us connect with students in a meaningful way. Our enrollment numbers have seen tremendous growth." — Director, Adhyayan
+
+---
+
+#### 8. Dew Drop Homestay
+- **Industry:** Hospitality
+- **Duration:** 4 months
+- **Services:** Website Development, Social Media Management, Business Development, Travel Marketing
+
+**About:**
+Dew Drop Homestay offers a peaceful retreat for travelers seeking comfort, authenticity, and a home away from home.
+
+**How We Helped:**
+Ad Grades collaborated with Dew Drop Homestay through intuitive Website Development, engaging Social Media Management, and focused Business Development support.
+
+**Results:**
+| Metric | Value |
+|--------|-------|
+| Bookings | 300% increase |
+| Online Visibility | 400% growth |
+| Customer Reviews | 250% increase |
+
+**Testimonial:**
+"AdGrades helped us transform from a local homestay to a sought-after destination. Their comprehensive digital approach brought us guests from across the country." — Owner, Dew Drop Homestay
+
+---
+
+#### 9. Nataraj Dance Studios
+- **Industry:** Entertainment
+- **Duration:** 4 months
+- **Services:** Social Media Marketing, Event Promotion, Video Content Creation
+
+**About:**
+Natraj Dance Studios is a premier dance academy that blends traditional and contemporary styles to inspire the next generation of performers.
+
+**How We Helped:**
+Ad Grades partnered with Natraj Dance Studios to craft a digital presence that matched the energy and elegance of their on-ground performances through engaging Social Media Management.
+
+**Results:**
+| Metric | Value |
+|--------|-------|
+| Student Enrollments | 200% increase |
+| Event Attendance | 180% increase |
+| Video Engagement | 350% growth |
+
+**Testimonial:**
+"AdGrades helped us showcase our passion for dance beautifully. Their video content and social media strategy brought us many talented students." — Founder, Nataraj Dance Studios
+
+---
+
+#### 10. Pureblend Foods
+- **Industry:** Food & Beverage
+- **Duration:** 6 months
+- **Services:** B2B Marketing, Website Development, Content Strategy, Lead Generation
+
+**About:**
+Pureblend Foods is a B2B food supply chain brand specializing in high-quality, scalable sourcing solutions for retailers, wholesalers, and foodservice companies.
+
+**How We Helped:**
+Ad Grades partnered with Pureblend Foods to give their B2B brand a digital edge through Social Media Management, Business Strategy, and professional Website Development.
+
+**Results:**
+| Metric | Value |
+|--------|-------|
+| B2B Clients | 250% increase |
+| Supply Volume | 300% growth |
+| Market Reach | 200% expansion |
+
+**Testimonial:**
+"AdGrades understood our B2B needs perfectly. Their marketing strategies helped us connect with the right business clients." — Director, Pureblend Foods
+
+---
+
+#### 11. AS Tech Industries
+- **Industry:** Engineering
+- **Duration:** 7 months
+- **Services:** Technical Marketing, Website Development, Content Strategy, Industry Networking
+
+**About:**
+AS Tech Industries is a forward-looking engineering and manufacturing company delivering precision, performance, and process innovation.
+
+**How We Helped:**
+Ad Grades supported AS Tech Industries in redefining their brand for the digital age through Website Development, Social Media Management, and Business Strategy.
+
+**Results:**
+| Metric | Value |
+|--------|-------|
+| Industrial Projects | 200% increase |
+| Technical Credibility | 250% growth |
+| Client Retention | 180% improvement |
+
+**Testimonial:**
+"AdGrades helped us communicate our technical expertise effectively. Their marketing strategies positioned us as industry leaders." — Director, AS Tech Industries
+
+---
+
+#### 12. SP Enterprises
+- **Industry:** Engineering (Heavy Equipment)
+- **Duration:** 5 months
+- **Services:** Industrial Marketing, Website Development, B2B Lead Generation, Content Strategy
+
+**About:**
+SP Enterprises is a trusted name in the heavy earthmoving equipment and spares sector, delivering durable machinery and critical components.
+
+**How We Helped:**
+Ad Grades worked with SP Enterprises to bring their industrial credibility into the digital spotlight through Website Development, Social Media Management, and Business Strategy.
+
+**Results:**
+| Metric | Value |
+|--------|-------|
+| Industrial Clients | 180% increase |
+| Inquiry Volume | 220% growth |
+| Sales Revenue | 200% increase |
+
+**Testimonial:**
+"AdGrades helped us modernize our industrial business. Their digital marketing approach brought us serious buyers." — Owner, SP Enterprises
+
+---
+
+## SIGNAL BOARD (PORTFOLIO)
+
+### Portfolio Page Overview
+The Signal Board (Portfolio) page showcases AdGrades' work across different clients and industries with artifact types including:
+- Videos (Reels, Explainers, Promos)
+- Posters (Static Graphics)
+- Social Media Posts
+- Web Projects (Landing Pages, Websites)
+
+### Portfolio Clients (13 Total)
+
+| Client | Industry | Key Outcomes |
+|--------|----------|--------------|
+| Medhavi Classes | Online Education | Leads, Visibility, ROAS 2.4x |
+| Aadhyan | Education | Leads, Community |
+| OS Code Solutions | IT Development | Leads, Visibility |
+| OS Code Community | Student Tech Community | Community Building |
+| Delhi 65 | Restaurant | Sales, ROAS 3.1x |
+| Species and Stories | Café | Footfall, Visibility |
+| MK Streetwear | Fashion | Sales 210%, Visibility |
+| Dew Drop Homestays | Hospitality | Bookings 165% |
+| PureBlend | Food Supply Chain | B2B Leads |
+| Vinayaka Enterprises | Interior Design | Leads, Visibility |
+| AS Tech | Vehicle Parts Supply | B2B Leads |
+| SP Enterprises | Industrial, Vehicle Supply | RFQs, Leads |
+
+---
+
+## ABOUT US PAGE
+
+### Company Overview
+AdGrades was founded on **May 2, 2023** with a mission to help startups succeed.
+
+**Tagline:** "We Help Startups Become the Next Big Name"
+
+**Description:** Creative marketing, data-driven ads, and stunning web design for startups and growing businesses.
+
+### Company Milestones
+
+| Year | Milestone | Description |
+|------|-----------|-------------|
+| 2023 | AdGrades Founded | AdGrades was born on May 2, 2023 with a mission to help startups succeed |
+| 2023 | First Success | Closed 5 successful clients for Google Ads and Analytics |
+| 2023 | Team Growth | The team scaled to 15 members with experts in each field |
+| 2024 | Major Expansion | Closed another 15 clients and expanded our service offerings |
+| 2025 | Innovation Focus | Worked with multiple clients of different fields and giving relentless service across industry |
+
+### Core Values
+
+| Value | Description |
+|-------|-------------|
+| 💡 Creativity | We believe innovative thinking and creative solutions are the keys to standing out in today's competitive landscape. |
+| 👁️ Transparency | We maintain open, honest communication with our clients, providing clear reporting and regular updates on all projects. |
+| 📊 Data-Driven | Every decision we make is backed by data and analytics, ensuring our strategies deliver measurable results. |
+| ❤️ Local Focus | We're committed to supporting local businesses and startups, helping them compete with larger enterprises. |
+
+### Team Members (12 Members)
+
+#### Leadership Team
+
+1. **Chandan B Krishna** - Founder, CEO
+   - The brain (and occasional chaos coordinator) behind AdGrades, Chandan turns big ideas into bigger realities. Equal parts strategist, storyteller, and serial problem-solver.
+   - LinkedIn: https://www.linkedin.com/in/chandan-b-krishna-91562a279/
+
+2. **Maneesh C Gowda** - CMO
+   - The creative spark behind AdGrades' voice, Maneesh can turn data into stories and strategies into results.
+   - LinkedIn: https://www.linkedin.com/in/maneesh-c-gowda-27942b258
+
+3. **Likitesh Gowda B E** - COO
+   - Likitesh is the one who makes sure everything behind the scenes at AdGrades runs smoothly.
+   - LinkedIn: http://linkedin.com/in/likiteshgowda
+
+4. **Ashish Gowda P** - CDO (Chief Design Officer)
+   - Ashish is the creative eye at AdGrades, bringing ideas to life through pixel-perfect designs.
+   - LinkedIn: https://www.linkedin.com/in/ashish-gowda-a3542f546165h41531r865
+
+5. **Chandu M** - CTO
+   - The tech compass of AdGrades, Chandu turns ambitious ideas into rock-solid systems.
+   - LinkedIn: https://www.linkedin.com/in/chandu-m-35b920295
+
+#### Department Heads
+
+6. **Pavan B Krishna** - Ads Manager
+   - Pavan is the mind behind our high-performing ad campaigns.
+   - LinkedIn: https://www.linkedin.com/in/pavan-bk-
+
+7. **Harshith S** - Research and Development Head
+   - Harshith leads innovation at AdGrades with curiosity and sharp thinking.
+   - LinkedIn: https://www.linkedin.com/in/harshith-s-895813266
+
+8. **Sonica BK** - Client Relations Manager & Lead Generation Head
+   - The voice, face, and charm of AdGrades. She keeps clients happy and leads flowing.
+   - LinkedIn: https://www.linkedin.com/in/sonica-bk-35a405395/
+
+#### Team Members
+
+9. **Inchara D** - Design Team Member
+   - Inchara brings creative energy to every design she touches.
+   - LinkedIn: https://www.linkedin.com/in/inchara-gowda-252429258
+
+10. **Suhas Reddy** - Agentic AI Developer & Research Assistant
+    - Part developer, part mad scientist, Suhas spends his days teaching AI agents to think.
+    - LinkedIn: https://www.linkedin.com/in/suhas-reddy-598058388/
+
+11. **J A Dharma Sudeep** - Quality Assurance Engineer & Agentic AI Developer
+    - Sudeep breaks things so you don't have to. A QA perfectionist with an AI twist.
+    - LinkedIn: https://www.linkedin.com/in/dharma-sudeep-244aa0253
+
+12. **Ujjwal Anuva** - Agentic AI Developer
+    - Ujjwal builds AI agents so smart, we sometimes wonder if he's one of them.
+    - LinkedIn: http://www.linkedin.com/in/ujwal-umesh-anuva
+
+---
+
+## CONTACT US PAGE
+
+### Contact Page Header
+- **Badge:** "Let's Start Something Amazing"
+- **Headline:** "Let's Chat About Your Next Project"
+- **Description:** "Ready to transform your business? We'd love to hear about your goals and discuss how AdGrades can help you achieve remarkable growth."
+- **CTA Buttons:**
+  - "Send Message" → Contact Form
+  - "WhatsApp Us" → https://wa.me/919686314869
+
+### Contact Form Fields
+- Full Name (required)
+- Email Address (required)
+- Company Name
+- Service Interested In (dropdown):
+  - Social Media Marketing
+  - Brand Identity & Design
+  - Search Engine Optimization
+  - Email Marketing
+  - Performance Advertising
+  - Web & App Development
+  - Multiple Services
+- Project Budget (dropdown):
+  - ₹50K - ₹1L
+  - ₹1L - ₹2.5L
+  - ₹2.5L - ₹5L
+  - ₹5L+
+  - Let's discuss
+- Project Details (required)
+
+### Contact Methods
+
+| Method | Details | Action |
+|--------|---------|--------|
+| WhatsApp | Quick responses for urgent inquiries | https://wa.me/919686314869 |
+| Instagram | Follow our latest work and updates | https://instagram.com/adgrades |
+| LinkedIn | Professional networking and insights | https://www.linkedin.com/company/ad-grades |
+
+### Office Information
+
+**Office Location:**
+Vinayaka Industries
+Behind KMF Cattle Feed Factory
+K Hoskoppalu, Hassan 573201
+Karnataka, India
+
+**Phone Numbers:**
+- +91 80736 98913
+- +91 9686314869
+
+**Email Addresses:**
+- info@adgrades.in
+- adgradesweb@gmail.com
+
+**Business Hours:**
+- Monday - Saturday: 9:00 AM - 9:00 PM
+- Sunday: 9:00 AM - 1:30 PM
+
+### Contact Page FAQs
+
+1. **What services does AdGrades offer?**
+   AdGrades offers comprehensive digital marketing services including Social Media Marketing, Brand Identity & Design, Search Engine Optimization (SEO), Email Marketing, Performance Advertising, and Web & App Development.
+
+2. **How can I start a project with AdGrades?**
+   Starting a project is simple! Contact us through our contact form, WhatsApp, or schedule a free consultation call. We'll discuss your goals, requirements, and budget to create a customized strategy.
+
+3. **What industries does AdGrades specialize in?**
+   We work with businesses across various industries including technology startups, e-commerce, education, hospitality, fashion, healthcare, and professional services.
+
+4. **How long does it take to see results from a campaign?**
+   Results vary: paid advertising shows initial results within 1-2 weeks, SEO takes 3-6 months, and social media growth shows progress within 4-8 weeks.
+
+5. **What makes AdGrades different from other agencies?**
+   AdGrades combines creative excellence with data-driven strategies. We're a young, dynamic team that understands modern digital landscapes with a unique blend of offline and online marketing expertise.
+
+### CTA Section
+- **Headline:** "Ready to Start Your Project?"
+- **Description:** "Let's discuss your goals and create a strategy that drives real results for your business."
+- **CTA Button:** "Get Your Free Strategy Session" → https://calendly.com/chandanbkrishna077/adgrades
+
+---
+
+## CAREERS PAGE
+
+### Page Header
+- **Headline:** "Join Our Growing Team"
+- **Description:** "Be part of a dynamic agency that's shaping the future of digital marketing"
+
+### Culture Values
+
+| Value | Description |
+|-------|-------------|
+| ⚡ Innovation First | We embrace new ideas and cutting-edge technologies to stay ahead of the curve. |
+| 👥 Team Collaboration | We believe in the power of teamwork and support each other to achieve greatness. |
+| 🎯 Results Driven | We focus on delivering measurable results that make a real impact for our clients. |
+| ❤️ Work-Life Balance | We prioritize mental health and ensure our team has time for what matters most. |
+| ☕ Fun Environment | Work should be enjoyable! We create a positive, energetic atmosphere every day. |
+| 🏆 Growth Opportunities | We invest in our team's professional development and career advancement. |
+
+### Open Positions (10 Positions)
+
+#### Marketing Department
+
+1. **Senior Digital Marketing Specialist**
+   - Type: Full-time
+   - Location: Remote / Hybrid
+   - Salary: Will be discussed
+   - Description: Lead digital marketing campaigns across multiple platforms and mentor junior marketers to drive consistent performance growth.
+   - Requirements:
+     - 5+ years of digital marketing experience
+     - Expertise in Google Ads, Meta Ads, and performance analytics
+     - Strong strategic thinking and communication abilities
+     - Hands-on experience with CRM and automation tools
+
+2. **Junior Digital Marketing Executive**
+   - Type: Full-time
+   - Location: Remote / Hybrid
+   - Salary: Will be discussed
+   - Description: Support in managing ad campaigns, analyzing performance, and assisting the senior team in multi-platform marketing execution.
+   - Requirements:
+     - 6 months – 1 year of digital marketing experience
+     - Familiarity with Google Ads and Meta Business Suite
+     - Strong attention to detail and reporting skills
+     - Basic knowledge of SEO and email marketing tools
+
+3. **Digital Marketing Intern**
+   - Type: Internship
+   - Location: Remote / Hybrid
+   - Salary: Will be discussed
+   - Description: Gain hands-on experience working with digital campaigns and learn from a team of experienced marketers.
+   - Requirements:
+     - Prior internship, course, or training in digital marketing
+     - Eagerness to learn paid media, SEO, and analytics
+     - Basic knowledge of digital platforms
+     - Excellent communication and adaptability
+
+4. **Lead Generation Expert**
+   - Type: Full-time
+   - Location: Remote / Hybrid
+   - Salary: Will be discussed
+   - Description: Build and execute strategies to generate qualified leads using digital and outbound techniques.
+   - Requirements:
+     - 1–2 years in lead generation or outbound campaigns
+     - Familiarity with LinkedIn, email automation, and CRM tools
+     - Strong communication and research skills
+     - Target-driven and organized approach
+
+#### Content Department
+
+5. **Professional Content Writer**
+   - Type: Full-time
+   - Location: Remote / Hybrid
+   - Salary: Will be discussed
+   - Description: Craft high-converting content for digital campaigns, landing pages, blogs, and more with a strategic marketing approach.
+   - Requirements:
+     - 1–2 years of content writing experience
+     - Knowledge of SEO and audience targeting
+     - Ability to write clear, persuasive, and engaging content
+     - Familiarity with digital platforms and CMS tools
+
+#### Creative Department
+
+6. **Photo & Videographer**
+   - Type: Full-time
+   - Location: Remote / Hybrid
+   - Salary: Will be discussed
+   - Description: Create engaging visual content that brings our brand and campaigns to life across platforms.
+   - Requirements:
+     - 1+ year of photography and videography experience
+     - Familiarity with camera equipment and editing software
+     - Eye for detail and composition
+     - Portfolio or sample work is a must
+
+7. **Video Editor**
+   - Type: Full-time
+   - Location: Remote / Hybrid
+   - Salary: Will be discussed
+   - Description: Edit and produce compelling videos for ads, social media, and promotional campaigns with a focus on impact.
+   - Requirements:
+     - 1–2 years of video editing experience
+     - Proficiency in Premiere Pro, After Effects, or similar tools
+     - Creative storytelling through video
+     - Understanding of short-form content trends
+
+#### Design Department
+
+8. **Senior Graphic Designer**
+   - Type: Full-time
+   - Location: Remote / Hybrid
+   - Salary: Will be discussed
+   - Description: Design high-quality creatives for campaigns, branding, and digital media, ensuring brand consistency and innovation.
+   - Requirements:
+     - 3+ years of graphic design experience
+     - Expertise in Adobe Suite and design systems
+     - Strong portfolio with digital-first designs
+     - Creative thinking with problem-solving skills
+
+9. **Junior Graphic Designer**
+   - Type: Full-time
+   - Location: Remote / Hybrid
+   - Salary: Will be discussed
+   - Description: Assist in producing creative assets for social media, ads, and web with guidance from senior designers.
+   - Requirements:
+     - 6 months – 1 year of experience or strong internship
+     - Proficiency in Adobe Photoshop, Illustrator, Canva
+     - Creativity and attention to design trends
+     - Ability to follow brand guidelines
+
+10. **Graphic Design Intern**
+    - Type: Internship
+    - Location: Remote / Hybrid
+    - Salary: Will be discussed
+    - Description: Kickstart your creative journey by working alongside experienced designers on real-world projects.
+    - Requirements:
+      - Basic understanding of design tools (Adobe / Canva)
+      - Portfolio of academic/personal projects
+      - Willingness to learn and receive feedback
+      - Creative eye and adaptability
+
+### Employee Benefits
+
+1. Competitive salary and performance bonuses
+2. Comprehensive health, dental, and vision insurance
+3. Flexible working hours and remote work options
+4. Professional development budget (₹1,50,000/year)
+5. Modern equipment and tools
+6. Team building events and company retreats
+
+---
+
+## FOOTER SECTION
+
+### Footer Components
+
+**Brand Section:**
+- AdGrades Logo
+- Tagline: "We help startups become the next big name through creative marketing, data-driven ads, and stunning web design."
+
+**Contact Information:**
+- **Phone:** +91 80736 98913, +91 9686314869
+- **Email:** info@adgrades.in, adgradesweb@gmail.com
+- **Address:** Vinayaka Industries, Behind KMF Cattle Feed Factory, K Hoskoppalu, Hassan 573201, Karnataka, India
+
+**Quick Links:**
+- Home
+- Services
+- Clients
+- Signal Board
+- About Us
+- Contact Us
+- Careers
+
+**Social Links:**
+- LinkedIn: https://www.linkedin.com/company/ad-grades
+- Instagram: https://instagram.com/adgrades
+- WhatsApp: https://wa.me/919686314869
+
+**Business Hours:**
+- Monday - Saturday: 9:00 AM - 9:00 PM
+- Sunday: 9:00 AM - 1:30 PM
+
+**Legal Links:**
+- Privacy Policy
+- Terms of Service
+
+**Copyright:**
+© 2025 AdGrades. All rights reserved.
+
+---
+
+## COMPANY INFORMATION
+
+### Basic Information
+| Field | Value |
+|-------|-------|
+| Company Name | AdGrades |
+| Website | https://adgrades.in/ |
+| Founded | May 2, 2023 |
+| Location | Hassan, Karnataka, India |
+| Team Size | 15 members |
+| Clients Served | 25+ |
+| Success Rate | 90% |
+
+### Contact Details
+| Type | Details |
+|------|---------|
+| Primary Phone | +91 80736 98913 |
+| Secondary Phone | +91 9686314869 |
+| Primary Email | info@adgrades.in |
+| Secondary Email | adgradesweb@gmail.com |
+| WhatsApp | https://wa.me/919686314869 |
+| LinkedIn | https://www.linkedin.com/company/ad-grades |
+| Instagram | https://instagram.com/adgrades |
+| Calendly | https://calendly.com/chandanbkrishna077/adgrades |
+
+### Office Address
+Vinayaka Industries
+Behind KMF Cattle Feed Factory
+K Hoskoppalu, Hassan 573201
+Karnataka, India
+
+### Business Hours
+- Monday - Saturday: 9:00 AM - 9:00 PM
+- Sunday: 9:00 AM - 1:30 PM
+
+### Service Categories
+1. **Digital Marketing**
+   - Social Media Management & Marketing
+   - Meta & Google Ads (Performance Marketing)
+   - Video Editing
+   - Content Marketing / Writing
+   - Email Marketing
+   - Performance Marketing (Cross-Channel ROI)
+   - Lead Generation
+
+2. **Software Solutions**
+   - Web Development
+   - SEO Optimization
+   - Mobile App Development
+   - E-commerce Solutions
+   - CRM & ERP Development
+
+3. **Offline Marketing**
+   - Event Marketing & Brand Activations
+   - Hoardings & Outdoor Ads
+
+### Industries Served
+- IT Solutions & Development
+- Education & Coaching
+- Food & Beverage / Restaurants
+- Fashion & Apparel
+- Hospitality & Travel
+- Interior Design
+- Engineering & Manufacturing
+- Industrial Equipment
+- Entertainment & Arts
+- Student Communities
+
+---
+
+## END OF DOCUMENTATION
+
+**Document Generated:** December 2025
+**Source:** AdGrades Website (https://adgrades.in/)
+**Total Services:** 14
+**Total Clients Featured:** 12
+**Total Team Members:** 12
+**Total Open Positions:** 10
