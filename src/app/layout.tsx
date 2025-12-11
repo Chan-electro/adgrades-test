@@ -16,7 +16,12 @@ export const metadata: Metadata = {
   title: "AdGrades - Transform Your Digital Presence",
   description: "Creative marketing agency helping startups and businesses build powerful digital strategies.",
   icons: {
-    icon: '/ag-logo.png',
+    icon: [
+      { url: '/ag-logo.png' },
+      { url: '/ag-logo.png', sizes: '32x32', type: 'image/png' },
+    ],
+    shortcut: '/ag-logo.png',
+    apple: '/ag-logo.png',
   },
 };
 

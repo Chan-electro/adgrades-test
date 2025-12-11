@@ -14,15 +14,18 @@ export default function CareersPage() {
                 </div>
 
                 <div className="grid md:grid-cols-3 gap-8 mb-24">
-                    {cultureValues.slice(0, 3).map((v, i) => (
-                        <div key={i} className="bg-gray-50 p-8 rounded-3xl text-center group hover:bg-black transition-colors duration-300">
-                            <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm">
-                                <v.icon className="w-6 h-6 text-black" />
+                    {cultureValues.slice(0, 3).map((v, i) => {
+                        const Icon = v.icon;
+                        return (
+                            <div key={i} className="bg-gray-50 p-8 rounded-3xl text-center group hover:bg-black transition-colors duration-300">
+                                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm">
+                                    <Icon className="w-6 h-6 text-black" />
+                                </div>
+                                <h3 className="text-xl font-bold text-black group-hover:text-white mb-2 transition-colors">{v.title}</h3>
+                                <p className="text-gray-500 group-hover:text-gray-400 transition-colors">{v.description}</p>
                             </div>
-                            <h3 className="text-xl font-bold text-black group-hover:text-white mb-2 transition-colors">{v.title}</h3>
-                            <p className="text-gray-500 group-hover:text-gray-400 transition-colors">{v.description}</p>
-                        </div>
-                    ))}
+                        )
+                    })}
                 </div>
 
                 <div className="max-w-4xl mx-auto mb-24">
