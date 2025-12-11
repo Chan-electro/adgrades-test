@@ -1,8 +1,8 @@
 // Careers data for the Careers page
-import { Users, Heart, Zap, Target, Coffee, Award } from "lucide-react";
+import { Users, Heart, Zap, Target, Coffee, Award, type LucideIcon } from "lucide-react";
 
 export interface CultureValue {
-  icon: React.ElementType;
+  icon: LucideIcon;
   title: string;
   description: string;
 }
