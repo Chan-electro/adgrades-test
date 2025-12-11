@@ -18,7 +18,7 @@ export const ArtifactSchema = z.object({
   outcomes: z.array(z.enum(outcomes)).default([]),
   durationSec: z.number().optional(),
   aspect: z.enum(["9:16", "1:1", "16:9"]).optional(),
-  meta: z.record(z.string()).optional(),
+  meta: z.record(z.string(), z.string()).optional(),
 });
 
 export const SocialHandleSchema = z.object({
