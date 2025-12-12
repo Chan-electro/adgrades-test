@@ -1,19 +1,57 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect, Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { contactConfig, budgetOptions, contactMethods, officeInfo, faqs } from '@/data/contactData';
+import { services } from '@/data/servicesData';
 import { ChevronDown, ChevronUp, Send, CheckCircle2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-export default function ContactPage() {
+// Helper function to find service and package details
+function getServiceDetails(serviceId: string | null, packageId: string | null) {
+    if (!serviceId) return { serviceName: '', packagePrice: '' };
+
+    const service = services.find(s => s.id === serviceId);
+    if (!service) return { serviceName: '', packagePrice: '' };
+
+    let packagePrice = '';
+    if (packageId && service.packages) {
+        const pkg = service.packages.find(p => p.id === packageId);
+        if (pkg) {
+            packagePrice = pkg.price;
+        }
+    }
+
+    return { serviceName: service.title, packagePrice };
+}
+
+// Inner component that uses useSearchParams
+function ContactForm() {
+    const searchParams = useSearchParams();
+    const serviceId = searchParams.get('service');
+    const packageId = searchParams.get('package');
+
+    const { serviceName, packagePrice } = getServiceDetails(serviceId, packageId);
+
     const [formData, setFormData] = useState({
         name: "",
         email: "",
-        service: "",
-        budget: "",
+        service: serviceName || "",
+        budget: packagePrice || "",
         message: ""
     });
     const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
     const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+    // Update form data when URL params change
+    useEffect(() => {
+        if (serviceName || packagePrice) {
+            setFormData(prev => ({
+                ...prev,
+                service: serviceName || prev.service,
+                budget: packagePrice || prev.budget
+            }));
+        }
+    }, [serviceName, packagePrice]);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -113,29 +151,47 @@ export default function ContactPage() {
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div className="space-y-2">
                                         <label className="text-sm font-bold text-black">Service</label>
-                                        <select
-                                            className="w-full border-b border-gray-300 py-3 focus:outline-none focus:border-black transition-colors bg-transparent text-gray-700"
-                                            value={formData.service}
-                                            onChange={e => setFormData({ ...formData, service: e.target.value })}
-                                        >
-                                            <option value="">Select Service...</option>
-                                            <option value="Social Media">Social Media</option>
-                                            <option value="Ads">Ads (Performance)</option>
-                                            <option value="Web Dev">Web Development</option>
-                                            <option value="SEO">SEO</option>
-                                            <option value="Other">Other</option>
-                                        </select>
+                                        {serviceName ? (
+                                            <input
+                                                type="text"
+                                                readOnly
+                                                className="w-full border-b border-gray-300 py-3 bg-transparent text-gray-700 cursor-not-allowed"
+                                                value={formData.service}
+                                            />
+                                        ) : (
+                                            <select
+                                                className="w-full border-b border-gray-300 py-3 focus:outline-none focus:border-black transition-colors bg-transparent text-gray-700"
+                                                value={formData.service}
+                                                onChange={e => setFormData({ ...formData, service: e.target.value })}
+                                            >
+                                                <option value="">Select Service...</option>
+                                                <option value="Social Media">Social Media</option>
+                                                <option value="Ads">Ads (Performance)</option>
+                                                <option value="Web Dev">Web Development</option>
+                                                <option value="SEO">SEO</option>
+                                                <option value="Other">Other</option>
+                                            </select>
+                                        )}
                                     </div>
                                     <div className="space-y-2">
-                                        <label className="text-sm font-bold text-black">Budget</label>
-                                        <select
-                                            className="w-full border-b border-gray-300 py-3 focus:outline-none focus:border-black transition-colors bg-transparent text-gray-700"
-                                            value={formData.budget}
-                                            onChange={e => setFormData({ ...formData, budget: e.target.value })}
-                                        >
-                                            <option value="">Select Budget...</option>
-                                            {budgetOptions.map(o => <option key={o.value} value={o.value}>{o.label}</option>)}
-                                        </select>
+                                        <label className="text-sm font-bold text-black">{packagePrice ? 'Selected Plan' : 'Budget'}</label>
+                                        {packagePrice ? (
+                                            <input
+                                                type="text"
+                                                readOnly
+                                                className="w-full border-b border-gray-300 py-3 bg-transparent text-gray-700 cursor-not-allowed"
+                                                value={formData.budget}
+                                            />
+                                        ) : (
+                                            <select
+                                                className="w-full border-b border-gray-300 py-3 focus:outline-none focus:border-black transition-colors bg-transparent text-gray-700"
+                                                value={formData.budget}
+                                                onChange={e => setFormData({ ...formData, budget: e.target.value })}
+                                            >
+                                                <option value="">Select Budget...</option>
+                                                {budgetOptions.map(o => <option key={o.value} value={o.value}>{o.label}</option>)}
+                                            </select>
+                                        )}
                                     </div>
                                 </div>
                                 <div className="space-y-2">
@@ -203,6 +259,15 @@ export default function ContactPage() {
                     />
                 </div>
             </div>
-        </div>
-    )
+        </div >
+    );
+}
+
+// Wrapper component with Suspense for useSearchParams
+export default function ContactPage() {
+    return (
+        <Suspense fallback={<div className="min-h-screen bg-white flex items-center justify-center"><div className="animate-spin h-8 w-8 border-4 border-blue-primary border-t-transparent rounded-full"></div></div>}>
+            <ContactForm />
+        </Suspense>
+    );
 }

@@ -78,8 +78,8 @@ export default function ServicesPage() {
                                         <div className="text-sm font-bold text-gray-900">
                                             {typeof service.pricing === 'object' ? (service.pricing as any).basic || 'Custom Pricing' : 'Custom Pricing'}
                                         </div>
-                                        <Link href={`/contact?service=${service.id}`} className="text-sm font-bold text-blue-primary hover:text-black transition-colors flex items-center">
-                                            Get Started <span className="ml-1">→</span>
+                                        <Link href={`/services/${service.id}`} className="text-sm font-bold text-blue-primary hover:text-black transition-colors flex items-center">
+                                            View Plans & Pricing <span className="ml-1">→</span>
                                         </Link>
                                     </div>
                                 </div>
@@ -88,12 +88,14 @@ export default function ServicesPage() {
                     </AnimatePresence>
                 </motion.div>
 
-                {filteredServices.length === 0 && (
-                    <div className="text-center py-20 text-gray-500">
-                        No services found in this category.
-                    </div>
-                )}
-            </div>
-        </div>
+                {
+                    filteredServices.length === 0 && (
+                        <div className="text-center py-20 text-gray-500">
+                            No services found in this category.
+                        </div>
+                    )
+                }
+            </div >
+        </div >
     );
 }

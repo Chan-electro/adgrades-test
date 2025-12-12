@@ -31,6 +31,10 @@ export default function Hero() {
 
     return (
         <section className="relative min-h-screen flex items-center overflow-hidden bg-white pt-20">
+            {/* Background Gradient Blobs */}
+            <div className="absolute top-[-100px] right-[-100px] w-96 h-96 bg-blue-100 rounded-full blur-3xl opacity-50 block md:hidden pointer-events-none" />
+            <div className="absolute bottom-[-50px] left-[-50px] w-72 h-72 bg-orange-100 rounded-full blur-3xl opacity-50 block md:hidden pointer-events-none" />
+
             <div className="container mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full">
                 <motion.div
                     className="max-w-2xl"
@@ -39,14 +43,14 @@ export default function Hero() {
                     animate="visible"
                 >
                     <motion.div variants={itemVariants} className="mb-8">
-                        <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gray-200 text-gray-600 text-xs font-bold tracking-wider uppercase bg-white shadow-sm">
-                            <Sparkles className="w-3 h-3 text-orange-500" />
+                        <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-blue-100 bg-blue-50/50 text-blue-600 text-xs font-bold tracking-wider uppercase shadow-sm">
+                            <Sparkles className="w-3 h-3 text-blue-500" />
                             CREATIVE MARKETING AGENCY
                         </span>
                     </motion.div>
 
                     <motion.h1
-                        className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter leading-[1.1] mb-6 text-black"
+                        className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tighter leading-[1.1] mb-6 text-black"
                         variants={itemVariants}
                     >
                         Transform Your <br className="hidden md:block" />
@@ -98,7 +102,7 @@ export default function Hero() {
                     </motion.div>
                 </motion.div>
 
-                <div className="hidden lg:block relative w-full -mr-20">
+                <div className="flex justify-center mt-12 lg:mt-0 relative w-full lg:-mr-20">
                     <HeroVisual />
                 </div>
             </div>

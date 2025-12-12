@@ -15,7 +15,7 @@ export default function CareersPage() {
 
                 <div className="grid md:grid-cols-3 gap-8 mb-24">
                     {cultureValues.slice(0, 3).map((v, i) => {
-                        const Icon = v.icon;
+                        const Icon = v.icon as any;
                         return (
                             <div key={i} className="bg-gray-50 p-8 rounded-3xl text-center group hover:bg-black transition-colors duration-300">
                                 <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm">

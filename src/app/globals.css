@@ -5,7 +5,7 @@
   --color-blue-primary: #0B57D0;
   --color-blue-soft: #6FB1FF;
   --color-black: #000000;
-  
+
   --font-sans: var(--font-outfit);
 }
 
@@ -24,7 +24,8 @@ body {
 }
 
 /* Lenis Smooth Scroll */
-html.lenis, html.lenis body {
+html.lenis,
+html.lenis body {
   height: auto;
 }
 
@@ -51,6 +52,23 @@ html.lenis, html.lenis body {
   position: absolute;
   top: 0;
   left: 0;
-  pointer-events: none; /* Allow clicks to pass through to UI underneath if needed, or set to auto if interactive */
+  pointer-events: none;
+  /* Allow clicks to pass through to UI underneath if needed, or set to auto if interactive */
   z-index: 0;
+}
+
+@layer utilities {
+  .animate-scroll {
+    animation: scroll 40s linear infinite;
+  }
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }

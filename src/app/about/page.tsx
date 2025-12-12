@@ -3,8 +3,35 @@
 import { milestones, values, team } from '@/data/aboutData';
 import Image from 'next/image';
 import { Linkedin } from 'lucide-react';
+import ExpandableCardDemo from '@/components/ui/expandable-card-demo-standard';
 
 export default function AboutPage() {
+    const teamCards = team.map((member) => ({
+        title: member.name,
+        description: member.role,
+        src: member.image,
+        ctaText: 'Connect',
+        ctaLink: member.linkedin,
+        content: () => (
+            <div className="space-y-4">
+                <p className="text-sm md:text-base leading-relaxed text-gray-700 dark:text-gray-300">
+                    {member.bio}
+                </p>
+                <div className="flex items-center gap-2">
+                    <a
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-blue-600 hover:text-blue-700 pt-2"
+                    >
+                        <Linkedin className="w-5 h-5" />
+                        <span className="font-medium">Connect on LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+        )
+    }));
+
     return (
         <div className="bg-white min-h-screen pt-32 pb-20 px-6">
             <div className="container mx-auto">
@@ -58,27 +85,7 @@ export default function AboutPage() {
 
                 <div className="mb-24">
                     <h2 className="text-4xl font-bold mb-12 tracking-tight">Meet The Team</h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
-                        {team.map((m, i) => (
-                            <div key={i} className="group">
-                                <div className="aspect-[4/5] bg-gray-100 rounded-2xl mb-6 overflow-hidden relative shadow-sm hover:shadow-xl transition-all duration-300">
-                                    <img
-                                        src={m.image}
-                                        alt={m.name}
-                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end">
-                                        <p className="text-white text-sm line-clamp-4 mb-4">{m.bio}</p>
-                                        <a href={m.linkedin} target="_blank" rel="noopener noreferrer" className="p-2 bg-blue-primary text-white rounded-full w-fit hover:bg-white hover:text-blue-primary transition-colors">
-                                            <Linkedin className="w-4 h-4" />
-                                        </a>
-                                    </div>
-                                </div>
-                                <h3 className="text-xl font-bold text-black group-hover:text-blue-primary transition-colors">{m.name}</h3>
-                                <p className="text-gray-500 font-medium text-sm tracking-wide">{m.role}</p>
-                            </div>
-                        ))}
-                    </div>
+                    <ExpandableCardDemo cards={teamCards} />
                 </div>
             </div>
         </div>
