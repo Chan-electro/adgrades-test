@@ -8,7 +8,7 @@ export interface Card {
     description: string;
     title: string;
     src: string;
-    ctaText: string;
+    ctaText: React.ReactNode;
     ctaLink: string;
     content: () => React.ReactNode | React.ReactNode;
 }
@@ -125,7 +125,7 @@ export default function ExpandableCardDemo({ cards }: ExpandableCardDemoProps) {
                                         initial={{ opacity: 0 }}
                                         animate={{ opacity: 1 }}
                                         exit={{ opacity: 0 }}
-                                        className="text-neutral-600 text-sm md:text-base leading-relaxed h-full md:h-fit overflow-auto dark:text-neutral-400 [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
+                                        className="text-neutral-600 text-sm md:text-base leading-relaxed h-full md:h-fit overflow-auto dark:text-neutral-400 [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
                                     >
                                         {typeof active.content === "function"
                                             ? active.content()

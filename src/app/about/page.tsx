@@ -4,30 +4,36 @@ import { milestones, values, team } from '@/data/aboutData';
 import Image from 'next/image';
 import { Linkedin } from 'lucide-react';
 import ExpandableCardDemo from '@/components/ui/expandable-card-demo-standard';
+import { Timeline } from '@/components/ui/timeline';
 
 export default function AboutPage() {
+    const timelineData = milestones.map(m => ({
+        title: m.year,
+        content: (
+            <div>
+                <h4 className="text-xl md:text-2xl font-bold text-neutral-800 mb-2">{m.title}</h4>
+                <p className="text-neutral-700 text-sm md:text-base leading-relaxed">
+                    {m.description}
+                </p>
+            </div>
+        )
+    }));
     const teamCards = team.map((member) => ({
         title: member.name,
         description: member.role,
         src: member.image,
-        ctaText: 'Connect',
+        ctaText: (
+            <div className="flex items-center gap-2">
+                <Linkedin className="w-4 h-4" />
+                <span>Connect</span>
+            </div>
+        ),
         ctaLink: member.linkedin,
         content: () => (
             <div className="space-y-4">
                 <p className="text-sm md:text-base leading-relaxed text-gray-700 dark:text-gray-300">
                     {member.bio}
                 </p>
-                <div className="flex items-center gap-2">
-                    <a
-                        href={member.linkedin}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-blue-600 hover:text-blue-700 pt-2"
-                    >
-                        <Linkedin className="w-5 h-5" />
-                        <span className="font-medium">Connect on LinkedIn</span>
-                    </a>
-                </div>
             </div>
         )
     }));
@@ -61,26 +67,11 @@ export default function AboutPage() {
                         </div>
                     </div>
 
-                    {/* Milestones timeline visual */}
-                    <div className="h-full bg-blue-primary/5 rounded-2xl border border-white/10 p-8 flex flex-col justify-center">
-                        <h3 className="text-2xl font-bold mb-6 text-white text-center">Our Journey</h3>
-                        <div className="space-y-6 relative">
-                            {/* Vertical line */}
-                            <div className="absolute left-[19px] top-2 bottom-2 w-[2px] bg-white/10"></div>
 
-                            {milestones.map((m, i) => (
-                                <div key={i} className="flex gap-6 relative">
-                                    <div className="w-10 h-10 rounded-full bg-gray-900 border border-blue-primary flex items-center justify-center flex-shrink-0 z-10 text-xs font-bold text-blue-primary">
-                                        {m.year}
-                                    </div>
-                                    <div className="pt-1">
-                                        <h4 className="font-bold text-white mb-1">{m.title}</h4>
-                                        <p className="text-sm text-gray-400">{m.description}</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
+                </div>
+
+                <div className="w-full mb-32">
+                    <Timeline data={timelineData} />
                 </div>
 
                 <div className="mb-24">
