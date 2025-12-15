@@ -3,7 +3,7 @@
 import { heroData } from '@/data/homeData';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import HeroVisual from '@/components/ui/HeroVisual';
+import FloatingPhone from '@/components/ui/FloatingPhone';
 import { ArrowRight, Sparkles, CheckCircle2 } from 'lucide-react';
 
 export default function Hero() {
@@ -103,7 +103,7 @@ export default function Hero() {
                 </motion.div>
 
                 <div className="flex justify-center mt-12 lg:mt-0 relative w-full lg:-mr-20">
-                    <HeroVisual />
+                    <FloatingPhone />
                 </div>
             </div>
         </section>

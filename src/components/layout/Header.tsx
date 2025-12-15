@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { siteContent } from '@/lib/data';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -24,8 +25,14 @@ export default function Header() {
                 }`}
         >
             <div className="container mx-auto px-6 flex justify-between items-center">
-                <Link href="/" className="text-2xl font-bold tracking-tighter text-black">
-                    AdGrades<span className="text-blue-primary">.</span>
+                <Link href="/" className="relative block w-40 h-12">
+                    <Image
+                        src="/adgrades-logo.png"
+                        alt="AdGrades Logo"
+                        fill
+                        className="object-contain object-left"
+                        priority
+                    />
                 </Link>
 
                 {/* Desktop Nav */}
