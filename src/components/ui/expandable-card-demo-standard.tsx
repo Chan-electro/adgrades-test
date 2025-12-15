@@ -82,6 +82,7 @@ export default function ExpandableCardDemo({ cards }: ExpandableCardDemoProps) {
                             layoutId={`card-${active.title}-${id}`}
                             ref={ref}
                             className="w-full max-w-[500px] h-full md:h-fit md:max-h-[90%] flex flex-col bg-white dark:bg-neutral-900 rounded-3xl overflow-hidden shadow-2xl"
+                            transition={{ duration: 0.5, ease: "easeInOut" }}
                         >
                             <motion.div layoutId={`image-${active.title}-${id}`}>
                                 <img
@@ -144,6 +145,7 @@ export default function ExpandableCardDemo({ cards }: ExpandableCardDemoProps) {
                         key={`card-${card.title}-${id}`}
                         onClick={() => setActive(card)}
                         className="flex flex-col gap-4 cursor-pointer group rounded-2xl p-4 transition-all duration-300 hover:bg-gray-50 dark:hover:bg-neutral-800/50"
+                        transition={{ duration: 0.5, ease: "easeInOut" }}
                     >
                         <motion.div layoutId={`image-${card.title}-${id}`} className="w-full overflow-hidden rounded-2xl shadow-sm group-hover:shadow-md transition-shadow">
                             <img

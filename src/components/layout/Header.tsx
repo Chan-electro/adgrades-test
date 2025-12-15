@@ -21,11 +21,16 @@ export default function Header() {
 
     return (
         <header
-            className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur-md shadow-sm py-4' : 'bg-transparent py-6'
+            className={`fixed left-0 right-0 mx-auto z-50 transition-all duration-500 ease-in-out ${isScrolled
+                ? 'top-4 w-[95%] md:w-[90%] max-w-7xl rounded-full bg-white/70 backdrop-blur-xl border border-white/10 shadow-lg py-3'
+                : 'top-0 w-full bg-transparent py-6'
                 }`}
         >
             <div className="container mx-auto px-6 flex justify-between items-center">
-                <Link href="/" className="relative block w-40 h-12">
+                <Link
+                    href="/"
+                    className={`relative block transition-all duration-300 ${isScrolled ? 'w-32 h-10' : 'w-40 h-12'}`}
+                >
                     <Image
                         src="/adgrades-logo.png"
                         alt="AdGrades Logo"

@@ -28,6 +28,12 @@ export const milestones = [
     description:
       "Worked with multiple clients of different fields and giving relentless service across industry",
   },
+  {
+    year: "2026",
+    title: "Recognized Agency In Bangalore",
+    description:
+      "Already Worked with 30 clients , and expanding the field of work, Introducing more creative tactics to grow brands",
+  },
 ];
 
 export const values = [
@@ -115,17 +121,17 @@ export const team = [
     linkedin: "https://www.linkedin.com/in/inchara-gowda-252429258",
   },
   {
-    name: "Suhas Reddy",
-    role: "Agentic AI Developer & Research Assistant",
-    image: "/suhas.jpg",
-    bio: "Part developer, part mad scientist, Suhas spends his days teaching AI agents to think (and occasionally outsmart him). When he’s not deep in research mode, he’s busy turning coffee into algorithms that make AdGrades tick.",
+    name: "Joy Raj Roy",
+    role: "Digital Content & Media Lead",
+    image: "/joy.jpg",
+    bio: "Joy Raj Roy is the human shield between brands and the internet. He handles media, creates content, reads minds, decodes vague briefs like “make it premium but fun,” and survives on caffeine and last minute changes. He fights algorithms daily, explains for the 100th time why posting at 2 AM won’t magically go viral, and somehow delivers anyway. If a brand looks effortless online, it’s because Joy stressed enough for everyone. If something goes wrong, it was definitely “a learning experience.",
     linkedin: "https://www.linkedin.com/in/suhas-reddy-598058388/",
   },
   {
-    name: "Sonica BK",
+    name: "Padmini SP",
     role: "Client Relations Manager & Lead Generation Head",
-    image: "/sonica.jpg",
-    bio: "The voice, face, and charm of AdGrades. Sonica can turn a cold lead into a warm friend before the first Google Meet ends. She keeps clients happy, leads flowing, and somehow manages it all with the calm of a zen master.",
+    image: "/padmini.jpg",
+    bio: "Padmini SP is the voice, face, and charm of AdGrades. She can turn a cold lead into a warm friend before the first Google Meet ends. She keeps clients happy, leads flowing, and somehow manages it all with the calm of a zen master.",
     linkedin: "https://www.linkedin.com/in/sonica-bk-35a405395/",
   },
   {
