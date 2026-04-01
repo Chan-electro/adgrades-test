@@ -1,71 +1,82 @@
-'use client';
-
-import { clientsData } from '@/data/clientsData';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
+import { clientsData } from '@/data/clientsData';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Clients | AdGrades',
+  description: 'Real results for real businesses. Explore our client success stories and case studies.',
+};
 
 export default function ClientsPage() {
-    return (
-        <div className="bg-white min-h-screen pt-32 pb-20 px-6">
-            <div className="container mx-auto">
-                <div className="mb-24">
-                    <span className="text-blue-primary font-bold tracking-wider uppercase text-sm mb-4 block">Case Studies</span>
-                    <h1 className="text-5xl md:text-7xl font-bold mb-8 tracking-tighter text-black">Real Results for Real Businesses<span className="text-blue-primary">.</span></h1>
-                </div>
-
-                <div className="grid grid-cols-1 gap-8">
-
-
-                    {clientsData.map((c, i) => (
-                        <Link href={`/clients/${c.id}`} key={c.id}>
-                            <div className="border-t border-gray-100 py-12 group hover:bg-gray-50/50 transition-colors px-4 -mx-4 cursor-pointer">
-                                <div className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1.5fr] gap-8 items-center">
-                                    {/* Left: Name & Category */}
-                                    <div className="flex flex-col gap-4">
-                                        <div className="flex items-center gap-4">
-                                            <span className="px-3 py-1 rounded-full border border-gray-200 text-xs font-bold uppercase tracking-wider text-gray-500 bg-white w-fit">{c.category}</span>
-                                        </div>
-                                        <h2 className="text-4xl md:text-5xl font-bold group-hover:text-blue-primary transition-colors">
-                                            {c.name}
-                                        </h2>
-                                    </div>
-
-                                    {/* Center: Logo */}
-                                    <div className="flex justify-center md:justify-center">
-                                        {c.logo && (
-                                            <div className="w-24 h-24 md:w-32 md:h-32 flex items-center justify-center p-4 rounded-full bg-white border border-gray-100 shadow-sm group-hover:shadow-md transition-all duration-300">
-                                                <img
-                                                    src={c.logo}
-                                                    alt={c.name}
-                                                    className="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all opacity-60 group-hover:opacity-100"
-                                                />
-                                            </div>
-                                        )}
-                                    </div>
-
-                                    {/* Right: Results & proper arrow alignment */}
-                                    <div className="flex items-center justify-between gap-4">
-                                        <div className="flex-1 md:text-right">
-                                            {c.results && c.results.length > 0 && (
-                                                <div className="inline-block text-left">
-                                                    <span className="block text-5xl md:text-6xl font-bold text-black mb-2">{c.results[0].value}</span>
-                                                    <span className="text-sm font-bold uppercase tracking-wider text-gray-400">{c.results[0].metric}</span>
-                                                </div>
-                                            )}
-                                        </div>
-
-                                        <div className="hidden md:block flex-shrink-0">
-                                            <div className="w-16 h-16 rounded-full border border-gray-200 flex items-center justify-center group-hover:bg-black group-hover:border-black group-hover:text-white transition-all transform group-hover:-translate-y-1 group-hover:translate-x-1">
-                                                <ArrowUpRight className="w-6 h-6" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
-                    ))}
-                </div>
-            </div>
+  return (
+    <div className="min-h-screen bg-background pt-32 pb-20 px-6">
+      <div className="container mx-auto">
+        <div className="mb-20">
+          <Badge variant="outline" className="mb-4 text-brand border-brand/30 bg-brand/5 font-bold tracking-widest uppercase text-xs">
+            Case Studies
+          </Badge>
+          <h1 className="text-5xl md:text-7xl font-black tracking-tighter text-foreground mb-4">
+            Real Results for<br />Real Businesses.
+          </h1>
         </div>
-    )
+
+        <div className="grid grid-cols-1 divide-y divide-border">
+          {clientsData.map((c) => (
+            <Link href={`/clients/${c.id}`} key={c.id} className="group block">
+              <div className="py-10 px-4 -mx-4 hover:bg-muted/30 transition-colors rounded-xl">
+                <div className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1.5fr] gap-8 items-center">
+                  {/* Left: Name & Category */}
+                  <div className="flex flex-col gap-3">
+                    <Badge variant="outline" className="self-start text-xs font-bold uppercase tracking-wider">
+                      {c.category}
+                    </Badge>
+                    <h2 className="text-4xl md:text-5xl font-black tracking-tighter text-foreground group-hover:text-brand transition-colors">
+                      {c.name}
+                    </h2>
+                  </div>
+
+                  {/* Center: Logo */}
+                  <div className="flex justify-center">
+                    {c.logo && (
+                      <div className="relative w-24 h-24 md:w-28 md:h-28 flex items-center justify-center p-4 rounded-full bg-background border border-border shadow-sm group-hover:shadow-md group-hover:border-brand/30 transition-all duration-300">
+                        <Image
+                          src={c.logo}
+                          alt={c.name}
+                          fill
+                          className="object-contain p-4 grayscale group-hover:grayscale-0 opacity-60 group-hover:opacity-100 transition-all"
+                          sizes="112px"
+                        />
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Right: Result & Arrow */}
+                  <div className="flex items-center justify-between gap-4">
+                    <div>
+                      {c.results && c.results.length > 0 && (
+                        <>
+                          <span className="block text-5xl md:text-6xl font-black text-foreground font-mono tabular-nums mb-1">
+                            {c.results[0].value}
+                          </span>
+                          <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                            {c.results[0].metric}
+                          </span>
+                        </>
+                      )}
+                    </div>
+                    <div className="hidden md:flex w-14 h-14 rounded-full border border-border items-center justify-center group-hover:bg-brand group-hover:border-brand group-hover:text-white transition-all group-hover:-translate-y-1 group-hover:translate-x-1">
+                      <ArrowUpRight className="w-5 h-5" aria-hidden="true" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 }

@@ -1,111 +1,116 @@
 'use client';
 
-import { heroData } from '@/data/homeData';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import FloatingPhone from '@/components/ui/FloatingPhone';
-import { ArrowRight, Sparkles, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Sparkles } from 'lucide-react';
+import { buttonVariants } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
+
+const trustBadges = [
+  'Data-Driven Strategies',
+  'Creative Excellence',
+  'Measurable Results',
+];
+
+const container = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { staggerChildren: 0.12, delayChildren: 0.1 } },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] } },
+};
 
 export default function Hero() {
-    const hero = heroData;
+  return (
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-background pt-24 md:pt-28">
+      {/* Subtle grid background */}
+      <div className="absolute inset-0 bg-grid opacity-60 pointer-events-none" aria-hidden="true" />
 
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.1,
-                delayChildren: 0.2
-            }
-        }
-    };
+      {/* Gradient orbs */}
+      <div
+        className="absolute top-[-120px] right-[-120px] w-[500px] h-[500px] rounded-full
+          bg-brand/10 blur-[120px] pointer-events-none"
+        aria-hidden="true"
+      />
+      <div
+        className="absolute bottom-[-80px] left-[-80px] w-[400px] h-[400px] rounded-full
+          bg-brand-light/10 blur-[120px] pointer-events-none"
+        aria-hidden="true"
+      />
 
-    const itemVariants = {
-        hidden: { opacity: 0, y: 20 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }
-        }
-    };
+      <div className="container mx-auto px-6 relative z-10 py-16">
+        <motion.div
+          className="max-w-4xl"
+          variants={container}
+          initial="hidden"
+          animate="visible"
+        >
+          {/* Badge */}
+          <motion.div variants={item} className="mb-6">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-brand/20 bg-brand/5 text-brand text-xs font-bold tracking-widest uppercase">
+              <Sparkles className="w-3 h-3" aria-hidden="true" />
+              Creative Marketing Agency
+            </span>
+          </motion.div>
 
-    return (
-        <section className="relative min-h-screen flex items-center overflow-hidden bg-white pt-20">
-            {/* Background Gradient Blobs */}
-            <div className="absolute top-[-100px] right-[-100px] w-96 h-96 bg-blue-100 rounded-full blur-3xl opacity-50 block md:hidden pointer-events-none" />
-            <div className="absolute bottom-[-50px] left-[-50px] w-72 h-72 bg-orange-100 rounded-full blur-3xl opacity-50 block md:hidden pointer-events-none" />
+          {/* Headline */}
+          <motion.h1
+            variants={item}
+            className="text-[clamp(2.8rem,7vw,6rem)] font-black tracking-tighter leading-[1.05] mb-6 text-foreground"
+          >
+            Transform Your{' '}
+            <br className="hidden sm:block" />
+            <span className="text-gradient">Digital Presence</span>
+          </motion.h1>
 
-            <div className="container mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full">
-                <motion.div
-                    className="max-w-2xl"
-                    variants={containerVariants}
-                    initial="hidden"
-                    animate="visible"
-                >
-                    <motion.div variants={itemVariants} className="mb-8">
-                        <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-blue-100 bg-blue-50/50 text-blue-600 text-xs font-bold tracking-wider uppercase shadow-sm">
-                            <Sparkles className="w-3 h-3 text-blue-500" />
-                            CREATIVE MARKETING AGENCY
-                        </span>
-                    </motion.div>
+          {/* Sub-headline */}
+          <motion.p
+            variants={item}
+            className="text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed max-w-xl"
+          >
+            At AdGrades, startups and businesses build powerful digital marketing strategies
+            that drive growth, engagement, and measurable results.
+          </motion.p>
 
-                    <motion.h1
-                        className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tighter leading-[1.1] mb-6 text-black"
-                        variants={itemVariants}
-                    >
-                        Transform Your <br className="hidden md:block" />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Digital Presence</span>
-                    </motion.h1>
+          {/* CTAs */}
+          <motion.div variants={item} className="flex flex-col sm:flex-row gap-4 mb-12">
+            <Link
+              href="/contact"
+              className={cn(
+                buttonVariants({ size: 'lg' }),
+                'group rounded-xl bg-foreground text-background hover:bg-brand hover:text-white transition-all duration-300 shadow-lg hover:shadow-brand/20 text-base font-bold px-8 h-12',
+              )}
+            >
+              Get Started Today
+              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
+            </Link>
+            <Link
+              href="/portfolio"
+              className={cn(
+                buttonVariants({ variant: 'outline', size: 'lg' }),
+                'rounded-xl text-base font-bold px-8 h-12 hover:border-foreground transition-all duration-300',
+              )}
+            >
+              View Our Work
+            </Link>
+          </motion.div>
 
-                    <motion.p
-                        className="text-lg md:text-xl text-gray-500 mb-10 leading-relaxed max-w-lg font-medium"
-                        variants={itemVariants}
-                    >
-                        {hero.description}
-                    </motion.p>
-
-                    <motion.div className="flex flex-col sm:flex-row gap-4 mb-12" variants={itemVariants}>
-                        <Link
-                            href="/contact"
-                            className="group px-8 py-4 bg-[#0a0a0a] text-white rounded-xl font-bold flex items-center justify-center hover:bg-blue-primary transition-all duration-300 shadow-xl hover:shadow-blue-primary/20 text-lg"
-                        >
-                            {hero.primaryCTA}
-                            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                        </Link>
-                        <Link
-                            href="/services"
-                            className="px-8 py-4 bg-white text-black border border-gray-200 rounded-xl font-bold flex items-center justify-center hover:bg-gray-50 transition-all duration-300 hover:border-gray-300 text-lg"
-                        >
-                            {hero.secondaryCTA}
-                        </Link>
-                    </motion.div>
-
-                    <motion.div variants={itemVariants} className="flex flex-col md:flex-row gap-6 md:gap-8 text-sm font-semibold text-gray-600">
-                        <div className="flex items-center gap-2">
-                            <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-500">
-                                <CheckCircle2 className="w-3 h-3" strokeWidth={3} />
-                            </div>
-                            Data-Driven Strategies
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-500">
-                                <CheckCircle2 className="w-3 h-3" strokeWidth={3} />
-                            </div>
-                            Creative Excellence
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-500">
-                                <CheckCircle2 className="w-3 h-3" strokeWidth={3} />
-                            </div>
-                            Measurable Results
-                        </div>
-                    </motion.div>
-                </motion.div>
-
-                <div className="flex justify-center mt-12 lg:mt-0 relative w-full lg:-mr-20">
-                    <FloatingPhone />
-                </div>
-            </div>
-        </section>
-    );
+          {/* Trust badges */}
+          <motion.div
+            variants={item}
+            className="flex flex-wrap gap-4 text-sm font-semibold text-muted-foreground"
+          >
+            {trustBadges.map((badge) => (
+              <div key={badge} className="flex items-center gap-2">
+                <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0" aria-hidden="true" />
+                {badge}
+              </div>
+            ))}
+          </motion.div>
+        </motion.div>
+      </div>
+    </section>
+  );
 }

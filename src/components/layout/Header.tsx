@@ -2,101 +2,129 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { siteContent } from '@/lib/data';
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { usePathname } from 'next/navigation';
+import { Menu } from 'lucide-react';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { buttonVariants } from '@/components/ui/button';
+import { ThemeToggle } from '@/components/theme-toggle';
+import { cn } from '@/lib/utils';
+
+const navLinks = [
+  { name: 'Home', href: '/' },
+  { name: 'Services', href: '/services' },
+  { name: 'Clients', href: '/clients' },
+  { name: 'Signal Board', href: '/portfolio' },
+  { name: 'About', href: '/about' },
+  { name: 'Contact', href: '/contact' },
+  { name: 'Careers', href: '/careers' },
+];
 
 export default function Header() {
-    const [isScrolled, setIsScrolled] = useState(false);
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
 
-    useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 50);
-        };
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
-    return (
-        <header
-            className={`fixed left-0 right-0 mx-auto z-50 transition-all duration-500 ease-in-out ${isScrolled
-                ? 'top-4 w-[95%] md:w-[90%] max-w-7xl rounded-full bg-white/70 backdrop-blur-xl border border-white/10 shadow-lg py-3'
-                : 'top-0 w-full bg-transparent py-6'
-                }`}
-        >
-            <div className="container mx-auto px-6 flex justify-between items-center">
-                <Link
-                    href="/"
-                    className={`relative block transition-all duration-300 ${isScrolled ? 'w-32 h-10' : 'w-40 h-12'}`}
-                >
-                    <Image
-                        src="/adgrades-logo.png"
-                        alt="AdGrades Logo"
-                        fill
-                        className="object-contain object-left"
-                        priority
-                    />
-                </Link>
+  // Close mobile nav on route change
+  useEffect(() => { setMobileOpen(false); }, [pathname]);
 
-                {/* Desktop Nav */}
-                <nav className="hidden md:flex items-center space-x-8">
-                    {siteContent.navigation.map((item) => (
-                        <Link
-                            key={item.name}
-                            href={item.href}
-                            className="text-sm font-medium hover:text-blue-primary transition-colors text-black"
-                        >
-                            {item.name}
-                        </Link>
-                    ))}
-                    <Link
-                        href="/contact"
-                        className="px-6 py-2.5 bg-[#0a0a0a] hover:bg-black/80 text-white rounded-full text-sm font-bold transition-all hover:scale-105 shadow-md"
-                    >
-                        Get Started
-                    </Link>
-                </nav>
+  return (
+    <header
+      className={cn(
+        'fixed left-0 right-0 mx-auto z-50 transition-all duration-500',
+        isScrolled
+          ? 'top-4 w-[95%] md:w-[90%] max-w-7xl rounded-full bg-background/80 backdrop-blur-xl border border-border shadow-sm py-2'
+          : 'top-0 w-full bg-transparent py-5',
+      )}
+    >
+      <div className="container mx-auto px-6 flex items-center justify-between">
+        {/* Logo */}
+        <Link href="/" aria-label="AdGrades home" className="relative block w-32 h-10 shrink-0">
+          <Image
+            src="/adgrades-logo.png"
+            alt="AdGrades"
+            fill
+            className="object-contain object-left"
+            priority
+            sizes="128px"
+          />
+        </Link>
 
-                {/* Mobile Menu Toggle */}
-                <button
-                    className="md:hidden p-2 text-black"
-                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                >
-                    {mobileMenuOpen ? <X /> : <Menu />}
-                </button>
+        {/* Desktop Nav */}
+        <nav className="hidden md:flex items-center gap-6" aria-label="Main navigation">
+          {navLinks.map((item) => (
+            <Link
+              key={item.name}
+              href={item.href}
+              className={cn(
+                'text-sm font-medium transition-colors hover:text-brand',
+                pathname === item.href ? 'text-brand font-semibold' : 'text-foreground/70',
+              )}
+            >
+              {item.name}
+            </Link>
+          ))}
+        </nav>
 
-                {/* Mobile Nav */}
-                <AnimatePresence>
-                    {mobileMenuOpen && (
-                        <motion.div
-                            initial={{ opacity: 0, y: -20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -20 }}
-                            className="absolute top-full left-0 w-full bg-white shadow-lg md:hidden flex flex-col items-center py-8 space-y-6"
-                        >
-                            {siteContent.navigation.map((item) => (
-                                <Link
-                                    key={item.name}
-                                    href={item.href}
-                                    className="text-lg font-medium text-black hover:text-blue-primary"
-                                    onClick={() => setMobileMenuOpen(false)}
-                                >
-                                    {item.name}
-                                </Link>
-                            ))}
-                            <Link
-                                href="/contact"
-                                className="px-8 py-3 bg-blue-primary text-white rounded-full font-semibold"
-                                onClick={() => setMobileMenuOpen(false)}
-                            >
-                                Start a Project
-                            </Link>
-                        </motion.div>
+        {/* Desktop right actions */}
+        <div className="hidden md:flex items-center gap-3">
+          <ThemeToggle />
+          <Link
+            href="/contact"
+            className={cn(
+              buttonVariants(),
+              'rounded-full bg-foreground text-background hover:bg-brand hover:text-white transition-colors',
+            )}
+          >
+            Get Started
+          </Link>
+        </div>
+
+        {/* Mobile: theme toggle + hamburger */}
+        <div className="flex md:hidden items-center gap-2">
+          <ThemeToggle />
+          <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
+            <SheetTrigger
+              aria-label="Open navigation menu"
+              className={cn(buttonVariants({ variant: 'ghost', size: 'icon' }), 'w-9 h-9')}
+            >
+              <Menu className="h-5 w-5" aria-hidden="true" />
+            </SheetTrigger>
+            <SheetContent side="right" className="w-72 pt-12">
+              <nav className="flex flex-col gap-1" aria-label="Mobile navigation">
+                {navLinks.map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    onClick={() => setMobileOpen(false)}
+                    className={cn(
+                      'px-4 py-3 rounded-lg text-base font-medium transition-colors hover:bg-muted',
+                      pathname === item.href ? 'bg-muted text-brand' : 'text-foreground',
                     )}
-                </AnimatePresence>
-            </div>
-        </header>
-    );
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+                <div className="mt-4 px-4">
+                  <Link
+                    href="/contact"
+                    onClick={() => setMobileOpen(false)}
+                    className={cn(buttonVariants(), 'w-full rounded-full justify-center')}
+                  >
+                    Start a Project
+                  </Link>
+                </div>
+              </nav>
+            </SheetContent>
+          </Sheet>
+        </div>
+      </div>
+    </header>
+  );
 }

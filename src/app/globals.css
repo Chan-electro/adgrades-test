@@ -1,74 +1,195 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-@theme {
-  --color-white: #ffffff;
-  --color-blue-primary: #0B57D0;
-  --color-blue-soft: #6FB1FF;
-  --color-black: #000000;
+@custom-variant dark (&:is(.dark *));
 
-  --font-sans: var(--font-outfit);
+/* ─── Brand + shadcn token bridge ─────────────────────────── */
+@theme inline {
+  --font-sans:    "Geist", "Geist Fallback", ui-sans-serif, system-ui, sans-serif;
+  --font-mono:    "Geist Mono", "Geist Mono Fallback", ui-monospace, monospace;
+  --font-heading: var(--font-sans);
+
+  /* AdGrades brand colours available as Tailwind utilities */
+  --color-brand:          #0B57D0;
+  --color-brand-light:    #6FB1FF;
+  --color-brand-soft:     #EEF4FF;
+  --color-cta:            #F97316;
+
+  /* shadcn token aliases */
+  --color-background:             var(--background);
+  --color-foreground:             var(--foreground);
+  --color-card:                   var(--card);
+  --color-card-foreground:        var(--card-foreground);
+  --color-popover:                var(--popover);
+  --color-popover-foreground:     var(--popover-foreground);
+  --color-primary:                var(--primary);
+  --color-primary-foreground:     var(--primary-foreground);
+  --color-secondary:              var(--secondary);
+  --color-secondary-foreground:   var(--secondary-foreground);
+  --color-muted:                  var(--muted);
+  --color-muted-foreground:       var(--muted-foreground);
+  --color-accent:                 var(--accent);
+  --color-accent-foreground:      var(--accent-foreground);
+  --color-destructive:            var(--destructive);
+  --color-border:                 var(--border);
+  --color-input:                  var(--input);
+  --color-ring:                   var(--ring);
+
+  --radius-sm:  calc(var(--radius) * 0.6);
+  --radius-md:  calc(var(--radius) * 0.8);
+  --radius-lg:  var(--radius);
+  --radius-xl:  calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
 }
 
+/* ─── Light theme ──────────────────────────────────────────── */
 :root {
-  --background: var(--color-white);
-  --foreground: var(--color-black);
+  --background:             oklch(1 0 0);
+  --foreground:             oklch(0.09 0 0);
+  --card:                   oklch(1 0 0);
+  --card-foreground:        oklch(0.09 0 0);
+  --popover:                oklch(1 0 0);
+  --popover-foreground:     oklch(0.09 0 0);
+  --primary:                oklch(0.42 0.19 264);   /* AdGrades blue #0B57D0 */
+  --primary-foreground:     oklch(1 0 0);
+  --secondary:              oklch(0.97 0 0);
+  --secondary-foreground:   oklch(0.09 0 0);
+  --muted:                  oklch(0.97 0 0);
+  --muted-foreground:       oklch(0.48 0 0);
+  --accent:                 oklch(0.97 0 0);
+  --accent-foreground:      oklch(0.09 0 0);
+  --destructive:            oklch(0.577 0.245 27.325);
+  --border:                 oklch(0.92 0 0);
+  --input:                  oklch(0.92 0 0);
+  --ring:                   oklch(0.42 0.19 264);
+  --radius:                 0.625rem;
 }
 
-body {
-  background-color: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans), sans-serif;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* ─── Dark theme ───────────────────────────────────────────── */
+.dark {
+  --background:             oklch(0.09 0 0);
+  --foreground:             oklch(0.98 0 0);
+  --card:                   oklch(0.13 0 0);
+  --card-foreground:        oklch(0.98 0 0);
+  --popover:                oklch(0.13 0 0);
+  --popover-foreground:     oklch(0.98 0 0);
+  --primary:                oklch(0.65 0.18 264);   /* lighter blue for dark bg */
+  --primary-foreground:     oklch(0.09 0 0);
+  --secondary:              oklch(0.18 0 0);
+  --secondary-foreground:   oklch(0.98 0 0);
+  --muted:                  oklch(0.18 0 0);
+  --muted-foreground:       oklch(0.62 0 0);
+  --accent:                 oklch(0.18 0 0);
+  --accent-foreground:      oklch(0.98 0 0);
+  --destructive:            oklch(0.704 0.191 22.216);
+  --border:                 oklch(1 0 0 / 10%);
+  --input:                  oklch(1 0 0 / 15%);
+  --ring:                   oklch(0.65 0.18 264);
 }
 
-/* Lenis Smooth Scroll */
-html.lenis,
-html.lenis body {
-  height: auto;
+/* ─── Base styles ──────────────────────────────────────────── */
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    box-sizing: border-box;
+  }
+
+  html {
+    @apply font-sans;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100dvh;
+  }
+
+  /* Skip-to-content for a11y */
+  .skip-to-content {
+    @apply sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999];
+    @apply px-4 py-2 rounded-md bg-brand text-white font-semibold text-sm;
+  }
+
+  /* Focus visible for keyboard nav */
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+
+  /* Smooth section spacing */
+  section {
+    @apply py-20 md:py-28;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans tracking-tight;
+  }
 }
 
-.lenis.lenis-smooth {
-  scroll-behavior: auto !important;
-}
-
-.lenis.lenis-smooth [data-lenis-prevent] {
-  overscroll-behavior: contain;
-}
-
-.lenis.lenis-stopped {
-  overflow: hidden;
-}
-
-.lenis.lenis-scrolling iframe {
-  pointer-events: none;
-}
-
-/* Utility for 3D canvas container */
-.canvas-container {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  /* Allow clicks to pass through to UI underneath if needed, or set to auto if interactive */
-  z-index: 0;
-}
-
+/* ─── Utilities ────────────────────────────────────────────── */
 @layer utilities {
-  .animate-scroll {
-    animation: scroll 40s linear infinite;
+  /* Logo marquee (TrustedPartners) */
+  .animate-marquee {
+    animation: marquee 40s linear infinite;
+  }
+
+  /* Gradient text */
+  .text-gradient {
+    background: linear-gradient(135deg, #0B57D0 0%, #6FB1FF 50%, #0B57D0 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-shift 4s ease-in-out infinite;
+  }
+
+  /* Subtle grid background for hero */
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, oklch(0 0 0 / 3%) 1px, transparent 1px),
+      linear-gradient(to bottom, oklch(0 0 0 / 3%) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .dark .bg-grid {
+    background-image:
+      linear-gradient(to right, oklch(1 0 0 / 4%) 1px, transparent 1px),
+      linear-gradient(to bottom, oklch(1 0 0 / 4%) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  /* Glow effect */
+  .glow-brand {
+    box-shadow: 0 0 60px 20px oklch(0.42 0.19 264 / 15%);
   }
 }
 
-@keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
+/* ─── Animations ───────────────────────────────────────────── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
 
-  to {
-    transform: translateX(-50%);
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% center; }
+  50%       { background-position: 100% center; }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
