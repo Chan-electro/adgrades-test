@@ -1,57 +1,77 @@
 'use client';
 
-import { servicesData } from '@/data/homeData';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, ArrowRight } from 'lucide-react';
+import { ArrowUpRight, ArrowRight, Smartphone, Palette, Search, Mail, Monitor, BarChart3 } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { servicesData } from '@/data/homeData';
+
+const icons = [Smartphone, Palette, Search, Mail, Monitor, BarChart3];
 
 export default function ServicesPreview() {
+  return (
+    <section className="bg-background">
+      <div className="container mx-auto px-6">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-12">
+          <div>
+            <Badge variant="outline" className="mb-4 text-brand border-brand/30 bg-brand/5 font-bold tracking-widest uppercase text-xs">
+              {servicesData.title}
+            </Badge>
+            <h2 className="text-3xl md:text-5xl font-black tracking-tighter text-foreground">
+              {servicesData.subtitle}
+            </h2>
+          </div>
+          <Link
+            href="/services"
+            className="hidden md:flex items-center gap-1 text-sm font-semibold text-foreground/70 hover:text-brand transition-colors group"
+          >
+            View All Services
+            <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" aria-hidden="true" />
+          </Link>
+        </div>
 
-    return (
-        <section className="py-20 md:py-32 bg-white relative">
-            <div className="container mx-auto px-6">
-                <div className="flex flex-col md:flex-row justify-between items-end mb-16">
-                    <div className="max-w-xl">
-                        <span className="text-blue-primary font-bold tracking-wider uppercase text-sm mb-4 block">{servicesData.title}</span>
-                        <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-black">
-                            {servicesData.subtitle}
-                        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {servicesData.services.map((service, i) => {
+            const Icon = icons[i] ?? Monitor;
+            return (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-40px' }}
+                transition={{ delay: i * 0.07, duration: 0.5, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
+              >
+                <Card className="group h-full hover:border-brand/40 hover:shadow-lg hover:shadow-brand/5 transition-all duration-300">
+                  <CardContent className="p-8 flex flex-col h-full">
+                    <div className="mb-6 w-12 h-12 rounded-xl bg-brand/10 flex items-center justify-center group-hover:bg-brand group-hover:text-white transition-colors duration-300">
+                      <Icon className="w-5 h-5 text-brand group-hover:text-white transition-colors" aria-hidden="true" />
                     </div>
-                    <Link href="/services" className="hidden md:flex items-center text-black font-semibold hover:text-blue-primary transition-colors group">
-                        View All Services <ArrowUpRight className="ml-2 w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                    <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-brand transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed flex-grow mb-6">
+                      {service.description}
+                    </p>
+                    <Link
+                      href="/contact"
+                      className="inline-flex items-center text-sm font-semibold text-brand hover:gap-2 transition-all gap-1"
+                    >
+                      Explore Service <ArrowRight className="w-3 h-3" aria-hidden="true" />
                     </Link>
-                </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            );
+          })}
+        </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {servicesData.services.map((service, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 }}
-                            className="group p-6 md:p-10 rounded-3xl border border-gray-100 hover:border-blue-primary/30 bg-white hover:shadow-2xl hover:shadow-blue-primary/5 transition-all duration-300 relative overflow-hidden flex flex-col items-start"
-                        >
-                            <div className="absolute top-0 right-0 p-8 opacity-0 group-hover:opacity-100 transition-opacity transform translate-x-4 group-hover:translate-x-0 duration-500 ease-out">
-                                <ArrowUpRight className="text-blue-primary w-6 h-6" />
-                            </div>
-
-                            <div className="text-5xl mb-8 group-hover:scale-110 transition-transform duration-300 origin-left">{service.icon}</div>
-                            <h3 className="text-2xl font-bold mb-4 text-black group-hover:text-blue-primary transition-colors">{service.title}</h3>
-                            <p className="text-gray-600 leading-relaxed mb-8">{service.description}</p>
-                            <Link href="/contact" className="mt-auto text-sm font-bold text-black border-b-2 border-transparent group-hover:border-blue-primary transition-all">
-                                Explore Service
-                            </Link>
-                        </motion.div>
-                    ))}
-                </div>
-
-                <div className="mt-12 md:hidden text-center">
-                    <Link href="/services" className="inline-flex items-center text-black font-semibold hover:text-blue-primary transition-colors group">
-                        View All Services <ArrowRight className="ml-2 w-5 h-5" />
-                    </Link>
-                </div>
-            </div>
-        </section>
-    );
+        <div className="mt-10 md:hidden text-center">
+          <Link href="/services" className="inline-flex items-center gap-2 text-sm font-semibold text-foreground hover:text-brand transition-colors">
+            View All Services <ArrowRight className="w-4 h-4" aria-hidden="true" />
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
 }

@@ -1,43 +1,58 @@
-'use client';
-
+import Image from 'next/image';
+import { Badge } from '@/components/ui/badge';
 import { projectsData } from '@/data/clientsData';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Signal Board | AdGrades',
+  description: 'Explore our portfolio of work — campaigns, websites, branding, and digital transformations.',
+};
 
 export default function PortfolioPage() {
-    return (
-        <div className="bg-white min-h-screen pt-32 pb-20 px-6">
-            <div className="container mx-auto">
-                <div className="mb-20">
-                    <span className="text-blue-primary font-bold tracking-wider uppercase text-sm mb-4 block">Our Work</span>
-                    <h1 className="text-6xl md:text-8xl font-bold tracking-tighter text-black">Signal Board<span className="text-blue-primary">.</span></h1>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {projectsData.map((p, i) => (
-                        <div key={i} className="aspect-[4/3] bg-gray-900 rounded-3xl overflow-hidden group relative cursor-pointer">
-                            {/* Background Image */}
-                            <div
-                                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-40"
-                                style={{ backgroundImage: `url(${p.image})` }}
-                            />
-
-                            {/* Overlay content */}
-                            <div className="absolute inset-0 p-8 flex flex-col justify-end z-10 text-white">
-                                <span className="text-blue-400 font-bold text-xs uppercase tracking-widest mb-2">{p.category}</span>
-                                <h3 className="text-3xl font-bold mb-4 leading-tight">{p.client}</h3>
-
-                                <div className="h-0 group-hover:h-auto overflow-hidden transition-all duration-300">
-                                    <p className="text-gray-300 text-sm border-t border-white/20 pt-4 leading-relaxed">
-                                        {p.result}
-                                    </p>
-                                </div>
-                            </div>
-
-                            {/* Gradient Overlay */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80 z-0" />
-                        </div>
-                    ))}
-                </div>
-            </div>
+  return (
+    <div className="min-h-screen bg-background pt-32 pb-20 px-6">
+      <div className="container mx-auto">
+        <div className="mb-16">
+          <Badge variant="outline" className="mb-4 text-brand border-brand/30 bg-brand/5 font-bold tracking-widest uppercase text-xs">
+            Our Work
+          </Badge>
+          <h1 className="text-6xl md:text-8xl font-black tracking-tighter text-foreground">
+            Signal Board<span className="text-brand">.</span>
+          </h1>
         </div>
-    )
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {projectsData.map((p, i) => (
+            <div
+              key={i}
+              className="aspect-[4/3] bg-muted rounded-2xl overflow-hidden group relative cursor-default"
+            >
+              {/* Background Image */}
+              <Image
+                src={p.image}
+                alt={p.client}
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-40"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
+
+              {/* Gradient */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" aria-hidden="true" />
+
+              {/* Content */}
+              <div className="absolute inset-0 p-6 flex flex-col justify-end z-10 text-white">
+                <span className="text-brand font-bold text-xs uppercase tracking-widest mb-2">{p.category}</span>
+                <h3 className="text-2xl font-black mb-3 leading-tight">{p.client}</h3>
+                <div className="overflow-hidden max-h-0 group-hover:max-h-24 transition-all duration-300">
+                  <p className="text-white/70 text-sm border-t border-white/20 pt-3 leading-relaxed">
+                    {p.result}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 }
