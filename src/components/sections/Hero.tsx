@@ -22,12 +22,10 @@ const item = {
   },
 };
 
-const chartBars = [
-  { pct: 32, delay: 0.4, label: 'Q1' },
-  { pct: 54, delay: 0.6, label: 'Q2' },
-  { pct: 73, delay: 0.8, label: 'Q3' },
-  { pct: 100, delay: 1.0, label: 'Q4' },
-];
+const LINE_POINTS = 'M0,88 C40,82 70,72 110,58 S160,38 200,26 S250,12 300,4';
+const AREA_POINTS = 'M0,88 C40,82 70,72 110,58 S160,38 200,26 S250,12 300,4 L300,100 L0,100 Z';
+const DOT_POSITIONS: [number, number][] = [[110, 58], [200, 26], [300, 4]];
+const Q_LABELS = ['Q1', 'Q2', 'Q3', 'Q4'];
 
 const statCards = [
   { value: '+300%', label: 'Brand Growth', style: { top: '6%', right: '-6%' }, delay: 1.3 },
@@ -65,7 +63,7 @@ export default function Hero() {
               className="text-[clamp(2.8rem,7vw,6rem)] font-black tracking-tighter leading-[1.05] mb-6 text-foreground"
             >
               Transform Your{' '}
-              <br className="hidden sm:block" />
+              <br />
               <span className="text-gradient">Digital Presence</span>
             </motion.h1>
 
@@ -164,43 +162,63 @@ function BrandGrowthVisual() {
           </motion.div>
         </div>
 
-        {/* Bar chart */}
-        <div className="flex items-end gap-3 h-44" aria-hidden="true">
-          {chartBars.map((bar, i) => (
-            <div key={i} className="flex-1 flex flex-col items-center gap-2">
-              <motion.div
-                className="w-full rounded-t-xl relative overflow-hidden"
-                style={{
-                  height: `${bar.pct}%`,
-                  originY: 1,
-                  background:
-                    i === chartBars.length - 1
-                      ? 'linear-gradient(to top, #0B57D0, #6FB1FF)'
-                      : `rgba(11,87,208,${0.15 + i * 0.12})`,
-                }}
-                initial={{ scaleY: 0 }}
-                animate={{ scaleY: 1 }}
-                transition={{
-                  delay: bar.delay,
-                  duration: 0.9,
-                  ease: [0.16, 1, 0.3, 1] as [number, number, number, number],
-                }}
-              >
-                {/* Sheen on last bar */}
-                {i === chartBars.length - 1 && (
-                  <motion.div
-                    className="absolute inset-0 bg-white/20"
-                    animate={{ opacity: [0.15, 0.4, 0.15] }}
-                    transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
-                  />
-                )}
-              </motion.div>
-              <span className="text-[11px] font-bold text-muted-foreground">{bar.label}</span>
-            </div>
-          ))}
+        {/* SVG Line Chart */}
+        <div aria-hidden="true">
+          <svg viewBox="0 0 300 100" className="w-full h-40" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="#0B57D0" stopOpacity="0.25" />
+                <stop offset="100%" stopColor="#0B57D0" stopOpacity="0.02" />
+              </linearGradient>
+            </defs>
+            {/* Area fill */}
+            <motion.path
+              d={AREA_POINTS}
+              fill="url(#areaGrad)"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5, duration: 0.8 }}
+            />
+            {/* Line */}
+            <motion.path
+              d={LINE_POINTS}
+              fill="none"
+              stroke="#0B57D0"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              initial={{ pathLength: 0, opacity: 0 }}
+              animate={{ pathLength: 1, opacity: 1 }}
+              transition={{
+                pathLength: { delay: 0.6, duration: 1.5, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] },
+                opacity: { delay: 0.6, duration: 0.3 },
+              }}
+            />
+            {/* Dot markers */}
+            {DOT_POSITIONS.map(([cx, cy], i) => (
+              <motion.circle
+                key={i}
+                cx={cx}
+                cy={cy}
+                r="4"
+                fill="#0B57D0"
+                stroke="white"
+                strokeWidth="1.5"
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ delay: 0.9 + i * 0.25, type: 'spring', stiffness: 300, damping: 18 }}
+              />
+            ))}
+          </svg>
+          {/* Quarter labels */}
+          <div className="flex justify-between px-1 -mt-1">
+            {Q_LABELS.map((q) => (
+              <span key={q} className="text-[11px] font-bold text-muted-foreground">{q}</span>
+            ))}
+          </div>
         </div>
 
-        <div className="h-px bg-border mt-0.5" aria-hidden="true" />
+        <div className="h-px bg-border mt-3" aria-hidden="true" />
       </motion.div>
 
       {/* Floating metric cards */}
