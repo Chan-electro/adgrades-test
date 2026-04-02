@@ -581,8 +581,7 @@ export const projectsData: ProjectData[] = [
       "Implemented comprehensive social media strategy with targeted lead generation campaigns",
     result:
       "Generated 150+ qualified leads and increased brand awareness by 300% in 4 months",
-    image:
-      "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?w=800&h=600&fit=crop",
+    image: "/Portfolio/OS%20code/OS%20CODE.png",
     tags: [
       "Social Media Management",
       "Lead Generation",
@@ -601,8 +600,7 @@ export const projectsData: ProjectData[] = [
       "Ran targeted ad campaigns focusing on local audience with engaging social media content",
     result:
       "200% increase in online orders and 150% growth in social media engagement in 3 months",
-    image:
-      "https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?w=800&h=600&fit=crop",
+    image: "/Portfolio/Delhi%20%5E5/Delhi%2065.png",
     tags: [
       "Targeted Advertising",
       "Social Media",
@@ -621,8 +619,7 @@ export const projectsData: ProjectData[] = [
       "Developed comprehensive social media strategy with lead generation funnels",
     result:
       "400% increase in student enrollments and 250% boost in social media following over 6 months",
-    image:
-      "https://images.pexels.com/photos/159844/cellular-education-classroom-159844.jpeg?w=800&h=600&fit=crop",
+    image: "/Portfolio/Medhavi/Medhavi%20Classes%20Doubt%20Solving.png",
     tags: [
       "Education Marketing",
       "Lead Generation",
@@ -641,8 +638,7 @@ export const projectsData: ProjectData[] = [
       "Implemented targeted lead generation campaigns with strategic social media positioning",
     result:
       "300% increase in qualified B2B leads and established strong industry presence in 4 months",
-    image:
-      "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?w=800&h=600&fit=crop",
+    image: "/Portfolio/Uplifto/Upliftio.png",
     tags: ["B2B Marketing", "Lead Generation", "Tech Services", "Social Media"],
   },
   {
@@ -656,8 +652,7 @@ export const projectsData: ProjectData[] = [
       "Built custom website, developed business strategy, and implemented social media marketing",
     result:
       "Established strong online presence, increased project inquiries by 250%, and streamlined business operations",
-    image:
-      "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?w=800&h=600&fit=crop",
+    image: "/Portfolio/OS%20code/Now%20building%20outcomes.png",
     tags: [
       "Website Development",
       "Business Strategy",
@@ -676,8 +671,7 @@ export const projectsData: ProjectData[] = [
       "Developed comprehensive brand strategy, built e-commerce website, and managed social media",
     result:
       "500% increase in online sales, established strong brand identity, and grew social media following by 400%",
-    image:
-      "https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?w=800&h=600&fit=crop",
+    image: "/Portfolio/Uplifto/Upliftio%20(2).png",
     tags: ["Brand Identity", "E-commerce", "Fashion Marketing", "Social Media"],
   },
 ];
