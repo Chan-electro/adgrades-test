@@ -33,6 +33,7 @@ export interface Service {
   timeline: string;
   category: "digital-marketing" | "software-solutions" | "offline-marketing";
   packages?: ServicePackage[];
+  faqs?: { question: string; answer: string }[];
 }
 
 export interface ServiceCategory {
@@ -202,6 +203,28 @@ export const services: Service[] = [
     ],
     timeline: "Ongoing monthly service",
     category: "digital-marketing",
+    faqs: [
+      {
+        question: "How many social media platforms do you manage?",
+        answer: "We manage Instagram, Facebook, and LinkedIn as standard. Twitter/X and YouTube can be added based on your package and audience. Our focus is on platforms where your target customers are most active.",
+      },
+      {
+        question: "Do you create the content or do we supply it?",
+        answer: "We handle everything — strategy, creative design, captions, and scheduling. You provide brand guidelines and product photos/videos once. Reels and video ads are billed separately under our Video Editing packages.",
+      },
+      {
+        question: "How long before we see results from social media management?",
+        answer: "Consistent growth typically becomes visible in 60–90 days. We focus on sustainable organic growth through content pillars and community engagement, not vanity metrics. Most clients see measurable engagement increases within the first month.",
+      },
+      {
+        question: "What is the difference between your Basic and Premium packages?",
+        answer: "Basic covers 12 static posts/month with 1 strategy call — ideal for maintaining a consistent presence. Premium adds 8 story frames/month, 2 revision rounds, and 2 strategy calls for faster audience growth. Enterprise is for brands that want to dominate with daily engagement and weekly calls.",
+      },
+      {
+        question: "Is ad spend included in the social media management price?",
+        answer: "No — our fee covers content creation, scheduling, and community management. Paid ad spend is billed separately by Meta/Google directly to your account. For paid ads management, see our Meta & Google Ads service.",
+      },
+    ],
   },
   {
     id: "meta-google-ads",
@@ -297,6 +320,28 @@ export const services: Service[] = [
     ],
     timeline: "Ongoing monthly service",
     category: "digital-marketing",
+    faqs: [
+      {
+        question: "Is ad spend included in your management fee?",
+        answer: "No. Your ad spend goes directly to Google or Meta — we never hold your budget. Our fee covers campaign strategy, setup, creative assets, weekly optimization, and reporting. This keeps billing transparent and your account data portable.",
+      },
+      {
+        question: "How quickly can you launch our first ad campaign?",
+        answer: "We typically go live within 5–7 business days: tracking setup and pixel implementation on day 1–2, account structure and audience building on day 2–4, creative variants finalized by day 5, and campaigns live by day 6–7.",
+      },
+      {
+        question: "What ROI can we expect from Google or Meta Ads?",
+        answer: "Results depend heavily on your industry, offer, and landing page. Across our clients, we consistently achieve 3x–10x ROAS for e-commerce and ₹200–₹800 cost-per-lead for service businesses. We set clear KPI targets in week 1 and report against them weekly.",
+      },
+      {
+        question: "Do you run ads on both Google and Meta, or just one?",
+        answer: "We can manage Google Ads, Meta Ads (Facebook + Instagram), or both — depending on where your customers are. Most B2C clients benefit from Meta for awareness and Google Search for high-intent buyers. We recommend the right mix after a free audit.",
+      },
+      {
+        question: "What happens if the campaigns are not performing well?",
+        answer: "We run structured A/B tests every week — new creatives, audiences, and bids. If a campaign underperforms for 2 consecutive weeks, we rebuild the strategy and brief new creative. You always receive a transparent report explaining what changed and why.",
+      },
+    ],
   },
   {
     id: "video-editing",
@@ -818,6 +863,24 @@ export const services: Service[] = [
     ],
     timeline: "Ongoing monthly service",
     category: "digital-marketing",
+    faqs: [
+      {
+        question: "What channels do you use for lead generation?",
+        answer: "We use a multi-channel approach: Google Search Ads for high-intent buyers, Meta Ads for awareness and retargeting, LinkedIn for B2B, WhatsApp automation for warm follow-ups, and landing page optimization to maximize conversion rates.",
+      },
+      {
+        question: "How do you measure lead quality, not just quantity?",
+        answer: "We implement lead scoring based on demographic fit, behavior signals, and engagement. Every lead is tracked through your CRM with source attribution. We report on both volume (number of leads) and quality (lead-to-appointment and appointment-to-close rates).",
+      },
+      {
+        question: "How much does cost-per-lead vary by industry?",
+        answer: "CPL varies significantly: ₹150–₹400 for local service businesses, ₹400–₹1,200 for B2B SaaS/tech, and ₹200–₹800 for education. We set CPL benchmarks based on your industry before launch and optimize weekly to stay on target.",
+      },
+      {
+        question: "Do you integrate with our existing CRM?",
+        answer: "Yes — we integrate with HubSpot, Zoho, Salesforce, LeadSquared, and Google Sheets. We also set up WhatsApp Business API notifications so your sales team gets instant alerts for every new lead.",
+      },
+    ],
   },
 
   // Software Solutions
@@ -916,6 +979,28 @@ export const services: Service[] = [
     ],
     timeline: "2–6 weeks",
     category: "software-solutions",
+    faqs: [
+      {
+        question: "How long does it take to build a website with AdGrades?",
+        answer: "A Basic 5-page site takes 2–3 weeks. A Premium 10-page CMS site with animations takes 3–5 weeks. Enterprise builds with custom integrations take 4–6 weeks. Timeline starts after the initial brand brief and asset handover from your side.",
+      },
+      {
+        question: "What technology do you use to build websites?",
+        answer: "We build on Next.js (React) for performance-critical sites, WordPress/Webflow for easy client-managed CMS sites, and Shopify for e-commerce. All sites are mobile-responsive, SEO-optimized, and include GA4 analytics setup.",
+      },
+      {
+        question: "Do you provide website maintenance after launch?",
+        answer: "Yes — all packages include monthly maintenance covering security updates, backups, and content edits (1–3 hours/month depending on tier). We also offer ongoing support via WhatsApp for urgent fixes.",
+      },
+      {
+        question: "Will I be able to update the website myself?",
+        answer: "Yes, on our Premium and Enterprise builds, we set up a headless CMS (like Sanity or WordPress) so you can update content, add blog posts, and manage pages without touching code. We provide a handover training session.",
+      },
+      {
+        question: "Is SEO included in your web development service?",
+        answer: "Every site we build includes a technical SEO baseline: optimized title tags, meta descriptions, alt text, sitemap, robots.txt, and GA4 setup. For ongoing keyword targeting and rank improvement, we recommend pairing with our SEO Optimization service.",
+      },
+    ],
   },
   {
     id: "seo-optimization",
@@ -1024,6 +1109,28 @@ export const services: Service[] = [
     ],
     timeline: "3-6 months to see results",
     category: "software-solutions",
+    faqs: [
+      {
+        question: "How long does SEO take to show results?",
+        answer: "SEO is a long-term investment. Most clients start seeing ranking improvements in 2–3 months, meaningful traffic increases in 3–6 months, and strong ROI at the 6–12 month mark. We set realistic expectations upfront and report progress monthly with full transparency.",
+      },
+      {
+        question: "What is included in your SEO audit?",
+        answer: "Our SEO audit covers technical health (site speed, crawlability, Core Web Vitals, mobile-friendliness), on-page optimization (title tags, meta descriptions, heading structure, content gaps), and off-page signals (backlink profile, domain authority, competitor analysis). You receive a prioritized action plan.",
+      },
+      {
+        question: "Do you build backlinks, and how?",
+        answer: "Yes — through white-hat methods only: guest posting on relevant industry blogs, digital PR, broken link building, and earning citations from business directories. We never buy links or use private blog networks. All link-building activity is reported monthly.",
+      },
+      {
+        question: "Will my rankings drop if I stop SEO?",
+        answer: "Rankings built on strong technical foundations, quality content, and authoritative backlinks are resilient. However, competitors continue optimizing, so maintaining an ongoing SEO strategy protects and grows your position. We recommend at least 12 months for lasting results.",
+      },
+      {
+        question: "Do you offer local SEO for businesses in Bangalore?",
+        answer: "Yes. Local SEO is a core part of our strategy for Bangalore businesses — Google Business Profile optimization, local keyword targeting (e.g., 'digital marketing agency Bangalore'), citation building on local directories, and review management to improve local map rankings.",
+      },
+    ],
   },
   {
     id: "mobile-app-development",

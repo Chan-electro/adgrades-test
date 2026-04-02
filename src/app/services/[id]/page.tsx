@@ -8,6 +8,12 @@ import { Badge } from '@/components/ui/badge';
 import { buttonVariants } from '@/lib/button-variants';
 import { cn } from '@/lib/utils';
 import type { Metadata } from 'next';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
 
 export function generateStaticParams() {
   return services.map(s => ({ id: s.id }));
@@ -16,9 +22,22 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params;
   const service = services.find(s => s.id === id);
+  if (!service) return { title: 'Service | AdGrades' };
   return {
-    title: service ? `${service.title} | AdGrades` : 'Service | AdGrades',
-    description: service?.shortDescription,
+    title: `${service.title} | AdGrades`,
+    description: service.shortDescription,
+    keywords: [
+      service.title,
+      `${service.title} Bangalore`,
+      `${service.title} agency India`,
+      ...service.technologies.slice(0, 4),
+      'AdGrades',
+    ],
+    openGraph: {
+      title: `${service.title} | AdGrades`,
+      description: service.shortDescription,
+      url: `https://adgrades.in/services/${service.id}`,
+    },
   };
 }
 
@@ -28,8 +47,34 @@ export default function ServiceDetail({ params }: { params: Promise<{ id: string
 
   if (!service) notFound();
 
+  const serviceJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: service.title,
+    description: service.fullDescription,
+    provider: {
+      '@type': 'Organization',
+      name: 'AdGrades',
+      url: 'https://adgrades.in',
+    },
+    areaServed: { '@type': 'Country', name: 'India' },
+    url: `https://adgrades.in/services/${service.id}`,
+  };
+
+  const faqJsonLd = service.faqs && service.faqs.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: service.faqs.map(f => ({
+      '@type': 'Question',
+      name: f.question,
+      acceptedAnswer: { '@type': 'Answer', text: f.answer },
+    })),
+  } : null;
+
   return (
     <div className="min-h-screen bg-background pb-20 pt-24">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
+      {faqJsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />}
       <div className="container mx-auto px-6">
         <Link
           href="/services"
@@ -138,6 +183,48 @@ export default function ServiceDetail({ params }: { params: Promise<{ id: string
                   {tech}
                 </Badge>
               ))}
+            </div>
+          </div>
+        )}
+
+        {/* FAQ Section */}
+        {service.faqs && service.faqs.length > 0 && (
+          <div className="max-w-3xl mx-auto mb-20">
+            <h2 className="text-3xl font-black tracking-tight text-center text-foreground mb-3">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-center text-muted-foreground mb-10 text-sm">
+              Everything you need to know about our {service.title} service.
+            </p>
+            <Accordion className="space-y-3">
+              {service.faqs.map((faq, idx) => (
+                <AccordionItem
+                  key={idx}
+                  value={`faq-${idx}`}
+                  className="border border-border rounded-xl px-6 data-[state=open]:border-brand/40 transition-colors"
+                >
+                  <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline py-5 text-sm md:text-base">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground text-sm leading-relaxed pb-5">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+
+            {/* CTA after FAQ */}
+            <div className="mt-12 text-center p-8 bg-brand/5 border border-brand/15 rounded-2xl">
+              <p className="font-bold text-foreground mb-2">Still have questions?</p>
+              <p className="text-sm text-muted-foreground mb-6">
+                Talk to our team — we&apos;ll answer everything before you commit to anything.
+              </p>
+              <Link
+                href={`/contact?service=${service.id}`}
+                className={cn(buttonVariants(), 'rounded-full px-8')}
+              >
+                Talk to Us
+              </Link>
             </div>
           </div>
         )}
