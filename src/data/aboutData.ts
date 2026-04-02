@@ -81,7 +81,7 @@ export const team = [
   {
     name: "Likitesh Gowda B E",
     role: "COO",
-    image: "/likit.jpg",
+    image: "/likit.jpeg",
     bio: "Likitesh is the one who makes sure everything behind the scenes at AdGrades runs smoothly. From managing day-to-day operations to keeping projects on track, he ensures the team is always aligned and focused. He's the kind of leader who makes complex processes feel simple and seamless.",
     linkedin: "http://linkedin.com/in/likiteshgowda",
   },

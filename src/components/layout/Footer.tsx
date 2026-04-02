@@ -1,4 +1,9 @@
+'use client';
+
 import Link from 'next/link';
+import Image from 'next/image';
+import { useState, useEffect } from 'react';
+import { useTheme } from 'next-themes';
 import { Instagram, Linkedin, MessageCircle, MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 
@@ -22,14 +27,27 @@ const serviceLinks = [
 ];
 
 export default function Footer() {
+  const [mounted, setMounted] = useState(false);
+  const { resolvedTheme } = useTheme();
+
+  useEffect(() => { setMounted(true); }, []);
+
+  const logoSrc = mounted && resolvedTheme === 'dark' ? '/Darkmode-Logo-AG.png' : '/adgrades-logo.png';
+
   return (
     <footer className="bg-muted/40 border-t border-border">
       <div className="container mx-auto px-6 pt-16 pb-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1 space-y-5">
-            <Link href="/" className="inline-block text-2xl font-black tracking-tight">
-              AdGrades<span className="text-brand">.</span>
+            <Link href="/" aria-label="AdGrades home" className="relative block w-36 h-11 shrink-0">
+              <Image
+                src={logoSrc}
+                alt="AdGrades"
+                fill
+                className="object-contain object-left"
+                sizes="144px"
+              />
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
               We help startups become the next big name through creative marketing,
