@@ -1,10 +1,6 @@
-import Image from 'next/image';
-import { Linkedin } from 'lucide-react';
-import { milestones, values, team } from '@/data/aboutData';
+import { milestones, values } from '@/data/aboutData';
 import { Badge } from '@/components/ui/badge';
-import { Card, CardContent } from '@/components/ui/card';
-import { buttonVariants } from '@/lib/button-variants';
-import { cn } from '@/lib/utils';
+import TeamGrid from '@/components/sections/TeamGrid';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -71,37 +67,11 @@ export default function AboutPage() {
 
         {/* Team */}
         <div className="mb-16">
-          <h2 className="text-3xl font-black tracking-tight text-foreground mb-12">Meet the Team</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {team.map((member, i) => (
-              <Card key={i} className="group hover:border-brand/30 hover:shadow-md transition-all duration-300">
-                <CardContent className="p-6 flex flex-col items-center text-center">
-                  <div className="relative w-20 h-20 rounded-full overflow-hidden mb-4 border-2 border-border group-hover:border-brand/30 transition-colors">
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      fill
-                      className="object-cover"
-                      sizes="80px"
-                    />
-                  </div>
-                  <h3 className="font-bold text-foreground text-sm leading-tight mb-1">{member.name}</h3>
-                  <p className="text-xs text-brand font-semibold mb-3">{member.role}</p>
-                  <p className="text-xs text-muted-foreground leading-relaxed line-clamp-3 mb-4">{member.bio}</p>
-                  <a
-                    href={member.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`${member.name} on LinkedIn`}
-                    className={cn(buttonVariants({ variant: 'ghost', size: 'sm' }), 'h-7 text-xs gap-1.5 text-muted-foreground hover:text-brand')}
-                  >
-                    <Linkedin className="w-3 h-3" aria-hidden="true" />
-                    Connect
-                  </a>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="mb-12">
+            <h2 className="text-3xl font-black tracking-tight text-foreground mb-2">Meet the Team</h2>
+            <p className="text-sm text-muted-foreground">Click any card to read the full bio.</p>
           </div>
+          <TeamGrid />
         </div>
       </div>
     </div>

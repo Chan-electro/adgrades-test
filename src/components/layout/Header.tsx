@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
+import { useTheme } from 'next-themes';
 import { usePathname } from 'next/navigation';
 import { Menu } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
@@ -23,7 +24,13 @@ const navLinks = [
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
+  const { resolvedTheme } = useTheme();
+
+  useEffect(() => { setMounted(true); }, []);
+
+  const logoSrc = mounted && resolvedTheme === 'dark' ? '/Darkmode-Logo-AG.png' : '/adgrades-logo.png';
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -47,7 +54,7 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" aria-label="AdGrades home" className="relative block w-32 h-10 shrink-0">
           <Image
-            src="/adgrades-logo.png"
+            src={logoSrc}
             alt="AdGrades"
             fill
             className="object-contain object-left"
