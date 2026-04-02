@@ -55,7 +55,7 @@ export default function ServiceDetail({ params }: { params: Promise<{ id: string
         {service.packages && service.packages.length > 0 ? (
           <div className="mb-20">
             <h2 className="text-3xl font-black tracking-tight text-center text-foreground mb-12">Choose Your Plan</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto pt-6">
               {service.packages.map((pkg) => {
                 const isPopular = pkg.id === 'premium';
                 return (

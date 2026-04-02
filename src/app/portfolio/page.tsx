@@ -36,6 +36,17 @@ export default function PortfolioPage() {
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
 
+              {/* Client Logo */}
+              <div className="absolute top-4 left-4 z-20 w-10 h-10 rounded-xl bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-md p-1.5">
+                <Image
+                  src={p.logo}
+                  alt={`${p.client} logo`}
+                  width={32}
+                  height={32}
+                  className="object-contain"
+                />
+              </div>
+
               {/* Gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" aria-hidden="true" />
 
