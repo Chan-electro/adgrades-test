@@ -114,7 +114,7 @@ export const team = [
     linkedin: "https://www.linkedin.com/in/inchara-gowda-252429258",
   },
   {
-    name: "Joy Raj Roy",
+    name: "Joyraj Roy",
     role: "Digital Content & Media Lead",
     image: "/joy.jpg",
     bio: "Joy Raj Roy is the human shield between brands and the internet. He handles media, creates content, reads minds, decodes vague briefs like “make it premium but fun,” and survives on caffeine and last minute changes. He fights algorithms daily, explains for the 100th time why posting at 2 AM won’t magically go viral, and somehow delivers anyway. If a brand looks effortless online, it’s because Joy stressed enough for everyone. If something goes wrong, it was definitely “a learning experience.",
