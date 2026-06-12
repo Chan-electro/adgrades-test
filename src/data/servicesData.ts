@@ -1,4 +1,5 @@
-import { Globe, Smartphone, ShoppingCart, Search, ChartBar as BarChart3, Target, Lightbulb, Rocket, Heart, Video as LucideIcon } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+import { Globe, Smartphone, ShoppingCart, Search, ChartBar as BarChart3, Target, Lightbulb, Rocket, Heart } from "lucide-react";
 
 export interface Service {
   id: string;
