@@ -60,16 +60,12 @@ export default function Hero() {
 
             <motion.h1
               variants={item}
-              className="text-[clamp(2.4rem,5.5vw,4.5rem)] font-black tracking-[-0.03em] leading-[1.1] mb-3 text-foreground"
+              className="text-[clamp(2.4rem,5.5vw,4.5rem)] font-black tracking-[-0.03em] leading-[1.1] mb-8 text-foreground"
             >
-              We Build Brands That
+              We Build Brands That{' '}
+              <br className="hidden sm:block" />
+              <span className="text-gradient">Actually Get Noticed.</span>
             </motion.h1>
-            <motion.p
-              variants={item}
-              className="font-hand text-[clamp(2.2rem,5vw,4rem)] text-brand leading-[1.1] mb-8 -rotate-1"
-            >
-              Actually Get Noticed.
-            </motion.p>
 
             <motion.p
               variants={item}
