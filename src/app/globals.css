@@ -9,6 +9,7 @@
   --font-sans:    "Geist", "Geist Fallback", ui-sans-serif, system-ui, sans-serif;
   --font-mono:    "Geist Mono", "Geist Mono Fallback", ui-monospace, monospace;
   --font-heading: var(--font-sans);
+  --font-hand:    var(--font-hand), "Caveat", cursive;
 
   /* AdGrades brand colours available as Tailwind utilities */
   --color-brand:          #0B57D0;

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { CheckCircle2 } from 'lucide-react';
+import { CircleCheck as CheckCircle2 } from 'lucide-react';
 import { cultureValues, openPositions, benefits } from '@/data/careersData';
 import { Badge } from '@/components/ui/badge';
 import { buttonVariants } from '@/lib/button-variants';
@@ -8,8 +8,11 @@ import { cn } from '@/lib/utils';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Careers | AdGrades',
-  description: 'Join the AdGrades team. Explore open positions and help shape the future of digital marketing.',
+  title: 'Careers — Join Our Team | Digital Marketing Jobs',
+  description: 'Join the AdGrades team in Bangalore & Hassan. Explore open positions in digital marketing, content creation, design, and video editing.',
+  alternates: {
+    canonical: 'https://adgrades.in/careers',
+  },
 };
 
 export default function CareersPage() {

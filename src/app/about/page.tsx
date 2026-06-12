@@ -4,8 +4,11 @@ import TeamGrid from '@/components/sections/TeamGrid';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'About Us | AdGrades',
-  description: 'Meet the team behind AdGrades — a passionate digital marketing agency helping startups become the next big name.',
+  title: 'About Us — Meet the AdGrades Team | Digital Marketing Experts',
+  description: 'Meet the team behind AdGrades — a passionate 15-member digital marketing agency in Bangalore & Hassan helping startups become the next big name with creative marketing strategies.',
+  alternates: {
+    canonical: 'https://adgrades.in/about',
+  },
 };
 
 export default function AboutPage() {

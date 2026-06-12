@@ -4,8 +4,11 @@ import { projectsData } from '@/data/clientsData';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Signal Board | AdGrades',
-  description: 'Explore our portfolio of work — campaigns, websites, branding, and digital transformations.',
+  title: 'Portfolio — Our Creative Work & Campaign Results',
+  description: 'Explore AdGrades portfolio of work — social media campaigns, brand designs, video productions, and digital transformations that delivered real results.',
+  alternates: {
+    canonical: 'https://adgrades.in/portfolio',
+  },
 };
 
 export default function PortfolioPage() {

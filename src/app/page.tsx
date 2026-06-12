@@ -9,13 +9,16 @@ import Testimonials from "@/components/sections/Testimonials";
 import CTA from "@/components/sections/CTA";
 
 export const metadata: Metadata = {
-  title: 'AdGrades — Transform Your Digital Presence',
+  title: 'AdGrades — Best Digital Marketing Agency in Bangalore | 300%+ Growth',
   description:
-    'AdGrades is a creative digital marketing agency helping startups and businesses build powerful strategies that drive growth, engagement, and measurable results.',
+    'AdGrades is a top-rated digital marketing agency in Bangalore delivering 300%+ brand growth through Google Ads, Meta Ads, SEO, social media marketing, and lead generation for startups and businesses.',
+  alternates: {
+    canonical: 'https://adgrades.in',
+  },
   openGraph: {
-    title: 'AdGrades — Transform Your Digital Presence',
+    title: 'AdGrades — Best Digital Marketing Agency in Bangalore',
     description:
-      'Creative marketing agency helping startups become the next big name through data-driven ads and stunning web design.',
+      'Top digital marketing agency helping startups achieve 300%+ growth through performance marketing, SEO, and creative brand design.',
     url: 'https://adgrades.in',
   },
 };

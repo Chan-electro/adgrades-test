@@ -6,8 +6,11 @@ import { clientsData } from '@/data/clientsData';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Clients | AdGrades',
-  description: 'Real results for real businesses. Explore our client success stories and case studies.',
+  title: 'Client Success Stories & Case Studies — Real Results',
+  description: 'Real results for real businesses. Explore how AdGrades helped 25+ clients achieve 300%+ growth through digital marketing, SEO, performance ads, and brand strategy.',
+  alternates: {
+    canonical: 'https://adgrades.in/clients',
+  },
 };
 
 export default function ClientsPage() {

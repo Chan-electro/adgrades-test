@@ -6,8 +6,16 @@ import ServicesFilter from '@/components/sections/ServicesFilter';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Services | AdGrades',
-  description: 'Explore our full range of digital marketing services — social media, performance ads, web development, SEO, and more.',
+  title: 'Digital Marketing Services — Social Media, SEO, Ads & More',
+  description: 'Explore AdGrades full range of digital marketing services: social media management, Google & Meta Ads, SEO optimization, lead generation, performance marketing, and video editing in Bangalore.',
+  alternates: {
+    canonical: 'https://adgrades.in/services',
+  },
+  openGraph: {
+    title: 'Digital Marketing Services | AdGrades Bangalore',
+    description: 'Social media marketing, performance ads, SEO, lead generation and more - all under one roof.',
+    url: 'https://adgrades.in/services',
+  },
 };
 
 export default function ServicesPage() {
