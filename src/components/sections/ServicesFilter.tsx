@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
-import { CheckCircle2 } from 'lucide-react';
+import { CircleCheck as CheckCircle2 } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { buttonVariants } from '@/lib/button-variants';
@@ -16,8 +16,9 @@ function formatCategory(cat: string) {
 
 export default function ServicesFilter() {
   const [filter, setFilter] = useState('All');
-  const categories = ['All', ...Array.from(new Set(services.map(s => s.category)))];
-  const filtered = filter === 'All' ? services : services.filter(s => s.category === filter);
+  const visibleServices = services.filter(s => !s.hidden);
+  const categories = ['All', ...Array.from(new Set(visibleServices.map(s => s.category)))];
+  const filtered = filter === 'All' ? visibleServices : visibleServices.filter(s => s.category === filter);
 
   return (
     <>

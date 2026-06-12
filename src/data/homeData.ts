@@ -69,15 +69,15 @@ export const servicesData = {
       ],
     },
     {
-      icon: "💻",
-      title: "Web Development",
+      icon: "📊",
+      title: "Lead Generation",
       description:
-        "Build fast, responsive, and user-friendly websites that drive conversions.",
+        "Capture high-quality leads with targeted campaigns and optimized funnels that drive conversions.",
       features: [
-        "Custom Development",
-        "E-commerce",
-        "Mobile Optimization",
-        "CMS Integration",
+        "Landing Pages",
+        "Lead Magnets",
+        "Funnel Optimization",
+        "CRM Integration",
       ],
     },
     {

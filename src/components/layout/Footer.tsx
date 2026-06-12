@@ -20,7 +20,7 @@ const navLinks = [
 const serviceLinks = [
   'Social Media Marketing',
   'Meta & Google Ads',
-  'Web Development',
+  'Content Marketing',
   'SEO Optimization',
   'Video Editing',
   'Lead Generation',
@@ -35,10 +35,11 @@ export default function Footer() {
   const logoSrc = mounted && resolvedTheme === 'dark' ? '/Darkmode-Logo-AG.png' : '/adgrades-logo.png';
 
   return (
-    <footer className="bg-muted/40 border-t border-border">
-      <div className="container mx-auto px-6 pt-16 pb-8">
+    <footer className="bg-card border-t border-border relative overflow-hidden">
+      <div className="absolute inset-0 bg-noise pointer-events-none" aria-hidden="true" />
+
+      <div className="container mx-auto px-6 pt-16 pb-8 relative z-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-          {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1 space-y-5">
             <Link href="/" aria-label="AdGrades home" className="relative block w-36 h-11 shrink-0">
               <Image
@@ -51,7 +52,7 @@ export default function Footer() {
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
               We help startups become the next big name through creative marketing,
-              data-driven ads, and stunning web design.
+              data-driven ads, and stunning brand design.
             </p>
             <div className="flex items-center gap-3">
               <a
@@ -59,7 +60,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="AdGrades Instagram"
-                className="p-2 rounded-full bg-background border border-border hover:bg-brand hover:text-white hover:border-brand transition-colors"
+                className="p-2.5 rounded-xl bg-background border border-border hover:bg-brand hover:text-white hover:border-brand transition-all duration-200"
               >
                 <Instagram className="w-4 h-4" />
               </a>
@@ -68,7 +69,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="AdGrades LinkedIn"
-                className="p-2 rounded-full bg-background border border-border hover:bg-brand hover:text-white hover:border-brand transition-colors"
+                className="p-2.5 rounded-xl bg-background border border-border hover:bg-brand hover:text-white hover:border-brand transition-all duration-200"
               >
                 <Linkedin className="w-4 h-4" />
               </a>
@@ -77,14 +78,13 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Chat on WhatsApp"
-                className="p-2 rounded-full bg-background border border-border hover:bg-green-500 hover:text-white hover:border-green-500 transition-colors"
+                className="p-2.5 rounded-xl bg-background border border-border hover:bg-green-500 hover:text-white hover:border-green-500 transition-all duration-200"
               >
                 <MessageCircle className="w-4 h-4" />
               </a>
             </div>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h4 className="font-bold text-sm uppercase tracking-widest text-muted-foreground mb-5">
               Quick Links
@@ -94,7 +94,7 @@ export default function Footer() {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-sm text-foreground/70 hover:text-brand transition-colors"
+                    className="text-sm text-foreground/70 hover:text-brand transition-colors duration-200"
                   >
                     {item.name}
                   </Link>
@@ -103,7 +103,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
           <div>
             <h4 className="font-bold text-sm uppercase tracking-widest text-muted-foreground mb-5">
               Services
@@ -113,7 +112,7 @@ export default function Footer() {
                 <li key={s}>
                   <Link
                     href="/services"
-                    className="text-sm text-foreground/70 hover:text-brand transition-colors"
+                    className="text-sm text-foreground/70 hover:text-brand transition-colors duration-200"
                   >
                     {s}
                   </Link>
@@ -122,7 +121,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
             <h4 className="font-bold text-sm uppercase tracking-widest text-muted-foreground mb-5">
               Contact
@@ -133,20 +131,20 @@ export default function Footer() {
                 <span>Vinayaka Industries, K Hoskoppalu, Hassan 573201, Karnataka</span>
               </li>
               <li>
-                <a href="tel:+918073698913" className="flex items-center gap-3 text-sm text-foreground/70 hover:text-brand transition-colors">
+                <a href="tel:+918073698913" className="flex items-center gap-3 text-sm text-foreground/70 hover:text-brand transition-colors duration-200">
                   <Phone className="w-4 h-4 shrink-0 text-brand" />
                   +91 80736 98913
                 </a>
               </li>
               <li>
-                <a href="mailto:info@adgrades.in" className="flex items-center gap-3 text-sm text-foreground/70 hover:text-brand transition-colors">
+                <a href="mailto:info@adgrades.in" className="flex items-center gap-3 text-sm text-foreground/70 hover:text-brand transition-colors duration-200">
                   <Mail className="w-4 h-4 shrink-0 text-brand" />
                   info@adgrades.in
                 </a>
               </li>
               <li className="flex items-start gap-3 text-sm text-foreground/70">
                 <Clock className="w-4 h-4 shrink-0 mt-0.5 text-brand" />
-                <span>Mon–Sat: 9 AM – 9 PM<br />Sun: 9 AM – 1:30 PM</span>
+                <span>Mon-Sat: 9 AM - 9 PM<br />Sun: 9 AM - 1:30 PM</span>
               </li>
             </ul>
           </div>
@@ -155,10 +153,10 @@ export default function Footer() {
         <Separator className="mb-8" />
 
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} AdGrades. All rights reserved.</p>
+          <p>@ {new Date().getFullYear()} AdGrades. All rights reserved.</p>
           <div className="flex gap-6">
-            <Link href="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-foreground transition-colors">Terms of Service</Link>
+            <Link href="/privacy" className="hover:text-foreground transition-colors duration-200">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-foreground transition-colors duration-200">Terms of Service</Link>
           </div>
         </div>
       </div>

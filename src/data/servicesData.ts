@@ -1,15 +1,4 @@
-import {
-  Globe,
-  Smartphone,
-  ShoppingCart,
-  Search,
-  BarChart3,
-  Target,
-  Lightbulb,
-  Rocket,
-  Heart,
-  LucideIcon,
-} from "lucide-react";
+import { Globe, Smartphone, ShoppingCart, Search, ChartBar as BarChart3, Target, Lightbulb, Rocket, Heart, Video as LucideIcon } from "lucide-react";
 
 export interface Service {
   id: string;
@@ -34,6 +23,7 @@ export interface Service {
   category: "digital-marketing" | "software-solutions" | "offline-marketing";
   packages?: ServicePackage[];
   faqs?: { question: string; answer: string }[];
+  hidden?: boolean;
 }
 
 export interface ServiceCategory {
@@ -979,6 +969,7 @@ export const services: Service[] = [
     ],
     timeline: "2–6 weeks",
     category: "software-solutions",
+    hidden: true,
     faqs: [
       {
         question: "How long does it take to build a website with AdGrades?",
@@ -1243,6 +1234,7 @@ export const services: Service[] = [
     ],
     timeline: "6-16 weeks",
     category: "software-solutions",
+    hidden: true,
   },
   {
     id: "ecommerce-solutions",
@@ -1336,6 +1328,7 @@ export const services: Service[] = [
     ],
     timeline: "3–8 weeks",
     category: "software-solutions",
+    hidden: true,
   },
   {
     id: "crm-erp-development",
@@ -1405,6 +1398,7 @@ export const services: Service[] = [
     ],
     timeline: "8-20 weeks",
     category: "software-solutions",
+    hidden: true,
   },
 
   // Offline Marketing Services

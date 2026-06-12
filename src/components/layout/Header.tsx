@@ -38,20 +38,18 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close mobile nav on route change
   useEffect(() => { setMobileOpen(false); }, [pathname]);
 
   return (
     <header
       className={cn(
-        'fixed left-0 right-0 mx-auto z-50 transition-all duration-500',
+        'fixed left-0 right-0 mx-auto z-50 transition-all duration-500 ease-out',
         isScrolled
-          ? 'top-4 w-[95%] md:w-[90%] max-w-7xl rounded-full bg-background/80 backdrop-blur-xl border border-border shadow-sm py-2'
+          ? 'top-4 w-[95%] md:w-[90%] max-w-7xl rounded-full bg-background/85 backdrop-blur-xl border border-border/80 shadow-lg shadow-black/[0.03] py-2'
           : 'top-0 w-full bg-transparent py-5',
       )}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
-        {/* Logo */}
         <Link href="/" aria-label="AdGrades home" className="relative block w-32 h-10 shrink-0">
           <Image
             src={logoSrc}
@@ -63,15 +61,16 @@ export default function Header() {
           />
         </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-6" aria-label="Main navigation">
+        <nav className="hidden md:flex items-center gap-1" aria-label="Main navigation">
           {navLinks.map((item) => (
             <Link
               key={item.name}
               href={item.href}
               className={cn(
-                'text-sm font-medium transition-colors hover:text-brand',
-                pathname === item.href ? 'text-brand font-semibold' : 'text-foreground/70',
+                'px-3.5 py-2 rounded-full text-sm font-medium transition-all duration-200',
+                pathname === item.href
+                  ? 'text-brand bg-brand/8 font-semibold'
+                  : 'text-foreground/70 hover:text-foreground hover:bg-muted',
               )}
             >
               {item.name}
@@ -79,21 +78,19 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Desktop right actions */}
         <div className="hidden md:flex items-center gap-3">
           <ThemeToggle />
           <Link
             href="/contact"
             className={cn(
               buttonVariants(),
-              'rounded-full bg-foreground text-background hover:bg-brand hover:text-white transition-colors',
+              'rounded-full bg-brand text-white hover:bg-brand-dark shadow-md shadow-brand/15 hover:shadow-brand/25 transition-all duration-300 font-bold text-sm px-6',
             )}
           >
             Get Started
           </Link>
         </div>
 
-        {/* Mobile: theme toggle + hamburger */}
         <div className="flex md:hidden items-center gap-2">
           <ThemeToggle />
           <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
@@ -111,18 +108,18 @@ export default function Header() {
                     href={item.href}
                     onClick={() => setMobileOpen(false)}
                     className={cn(
-                      'px-4 py-3 rounded-lg text-base font-medium transition-colors hover:bg-muted',
-                      pathname === item.href ? 'bg-muted text-brand' : 'text-foreground',
+                      'px-4 py-3 rounded-xl text-base font-medium transition-colors hover:bg-muted',
+                      pathname === item.href ? 'bg-brand/8 text-brand font-semibold' : 'text-foreground',
                     )}
                   >
                     {item.name}
                   </Link>
                 ))}
-                <div className="mt-4 px-4">
+                <div className="mt-6 px-4">
                   <Link
                     href="/contact"
                     onClick={() => setMobileOpen(false)}
-                    className={cn(buttonVariants(), 'w-full rounded-full justify-center')}
+                    className={cn(buttonVariants(), 'w-full rounded-full justify-center bg-brand text-white hover:bg-brand-dark font-bold')}
                   >
                     Start a Project
                   </Link>

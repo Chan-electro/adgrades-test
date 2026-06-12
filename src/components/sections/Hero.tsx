@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowRight, CheckCircle2, Sparkles, TrendingUp } from 'lucide-react';
+import { ArrowRight, CircleCheck as CheckCircle2, Sparkles, TrendingUp, Users, Award } from 'lucide-react';
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
@@ -10,69 +10,71 @@ const trustBadges = ['Data-Driven Strategies', 'Creative Excellence', 'Measurabl
 
 const container = {
   hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.12, delayChildren: 0.1 } },
+  visible: { opacity: 1, transition: { staggerChildren: 0.1, delayChildren: 0.05 } },
 };
 
 const item = {
-  hidden: { opacity: 0, y: 24 },
+  hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] },
+    transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] },
   },
 };
 
-const LINE_POINTS = 'M0,88 C40,82 70,72 110,58 S160,38 200,26 S250,12 300,4';
-const AREA_POINTS = 'M0,88 C40,82 70,72 110,58 S160,38 200,26 S250,12 300,4 L300,100 L0,100 Z';
-const DOT_POSITIONS: [number, number][] = [[110, 58], [200, 26], [300, 4]];
-const Q_LABELS = ['Q1', 'Q2', 'Q3', 'Q4'];
-
-const statCards = [
-  { value: '+300%', label: 'Brand Growth', style: { top: '6%', right: '-6%' }, delay: 1.3 },
-  { value: '10x ROI', label: 'Ad Returns', style: { bottom: '26%', right: '-10%' }, delay: 1.6 },
-  { value: '50+', label: 'Happy Clients', style: { bottom: '5%', left: '6%' }, delay: 1.9 },
+const metrics = [
+  { icon: TrendingUp, value: '300%', label: 'Avg. Growth' },
+  { icon: Users, value: '25+', label: 'Clients Served' },
+  { icon: Award, value: '90%', label: 'Retention Rate' },
 ];
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-background pt-24 md:pt-28">
-      <div className="absolute inset-0 bg-grid opacity-60 pointer-events-none" aria-hidden="true" />
-      <div
-        className="absolute top-[-120px] right-[-120px] w-[500px] h-[500px] rounded-full bg-brand/10 blur-[120px] pointer-events-none"
+    <section className="relative min-h-[100dvh] flex items-center overflow-hidden bg-background !pt-28 !pb-16 md:!pt-32 md:!pb-24">
+      <div className="absolute inset-0 bg-grid opacity-40 pointer-events-none" aria-hidden="true" />
+      <div className="absolute inset-0 bg-noise pointer-events-none" aria-hidden="true" />
+
+      <motion.div
+        className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] rounded-full pointer-events-none"
+        style={{ background: 'radial-gradient(circle, oklch(0.42 0.19 264 / 8%) 0%, transparent 70%)' }}
+        animate={{ scale: [1, 1.05, 1], opacity: [0.6, 1, 0.6] }}
+        transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
         aria-hidden="true"
       />
-      <div
-        className="absolute bottom-[-80px] left-[-80px] w-[400px] h-[400px] rounded-full bg-brand-light/10 blur-[120px] pointer-events-none"
+      <motion.div
+        className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full pointer-events-none"
+        style={{ background: 'radial-gradient(circle, oklch(0.65 0.18 264 / 6%) 0%, transparent 70%)' }}
+        animate={{ scale: [1, 1.08, 1], opacity: [0.4, 0.8, 0.4] }}
+        transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
         aria-hidden="true"
       />
 
-      <div className="container mx-auto px-6 relative z-10 py-16">
-        <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
-
-          {/* Left: text content */}
-          <motion.div variants={container} initial="hidden" animate="visible">
-            <motion.div variants={item} className="mb-6">
-              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-brand/20 bg-brand/5 text-brand text-xs font-bold tracking-widest uppercase">
-                <Sparkles className="w-3 h-3" aria-hidden="true" />
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="grid lg:grid-cols-[1fr,0.8fr] gap-16 lg:gap-20 items-center">
+          <motion.div variants={container} initial="hidden" animate="visible" className="max-w-2xl">
+            <motion.div variants={item} className="mb-8">
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-brand/20 bg-brand/5 text-brand text-xs font-bold tracking-widest uppercase">
+                <Sparkles className="w-3.5 h-3.5" aria-hidden="true" />
                 Creative Marketing Agency
               </span>
             </motion.div>
 
             <motion.h1
               variants={item}
-              className="text-[clamp(2.8rem,7vw,6rem)] font-black tracking-tighter leading-[1.05] mb-6 text-foreground"
+              className="text-[clamp(2.5rem,6vw,5.5rem)] font-black tracking-[-0.04em] leading-[1.05] mb-8 text-foreground"
             >
-              Transform Your{' '}
-              <br />
-              <span className="text-gradient">Digital Presence</span>
+              We Build Brands{' '}
+              <br className="hidden sm:block" />
+              That{' '}
+              <span className="text-gradient">Stand Out</span>
             </motion.h1>
 
             <motion.p
               variants={item}
-              className="text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed max-w-xl"
+              className="text-lg md:text-xl text-muted-foreground mb-10 leading-[1.7] max-w-lg"
             >
-              At AdGrades, startups and businesses build powerful digital marketing strategies
-              that drive growth, engagement, and measurable results.
+              AdGrades helps startups and businesses craft digital marketing strategies
+              that drive real growth, engagement, and measurable ROI.
             </motion.p>
 
             <motion.div variants={item} className="flex flex-col sm:flex-row gap-4 mb-12">
@@ -80,17 +82,17 @@ export default function Hero() {
                 href="/contact"
                 className={cn(
                   buttonVariants({ size: 'lg' }),
-                  'group rounded-xl bg-foreground text-background hover:bg-brand hover:text-white transition-all duration-300 shadow-lg hover:shadow-brand/20 text-base font-bold px-8 h-12',
+                  'group rounded-xl bg-brand text-white hover:bg-brand-dark transition-all duration-300 shadow-lg shadow-brand/20 hover:shadow-brand/30 text-base font-bold px-8 h-13',
                 )}
               >
-                Get Started Today
+                Start Your Project
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
               </Link>
               <Link
                 href="/portfolio"
                 className={cn(
                   buttonVariants({ variant: 'outline', size: 'lg' }),
-                  'rounded-xl text-base font-bold px-8 h-12 hover:border-foreground transition-all duration-300',
+                  'rounded-xl text-base font-bold px-8 h-13 border-foreground/20 hover:border-foreground hover:bg-foreground hover:text-background transition-all duration-300',
                 )}
               >
                 View Our Work
@@ -99,20 +101,19 @@ export default function Hero() {
 
             <motion.div
               variants={item}
-              className="flex flex-wrap gap-4 text-sm font-semibold text-muted-foreground"
+              className="flex flex-wrap gap-x-6 gap-y-3 text-sm font-medium text-muted-foreground"
             >
               {trustBadges.map((badge) => (
                 <div key={badge} className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0" aria-hidden="true" />
+                  <CheckCircle2 className="w-4 h-4 text-brand shrink-0" aria-hidden="true" />
                   {badge}
                 </div>
               ))}
             </motion.div>
           </motion.div>
 
-          {/* Right: Brand Growth 3D Visual */}
-          <div className="hidden md:flex items-center justify-center">
-            <BrandGrowthVisual />
+          <div className="hidden lg:block">
+            <MetricsVisual />
           </div>
         </div>
       </div>
@@ -120,31 +121,23 @@ export default function Hero() {
   );
 }
 
-function BrandGrowthVisual() {
+function MetricsVisual() {
   return (
-    <div
-      className="relative w-full max-w-[400px] mx-auto"
-      style={{ perspective: '900px' }}
-      aria-label="Animated brand growth chart showing quarterly performance increase"
-      role="img"
-    >
-      {/* 3D-tilted main card */}
+    <div className="relative w-full max-w-[420px] mx-auto" aria-label="Performance metrics visualization" role="img">
       <motion.div
-        className="w-full rounded-3xl border border-border bg-background/70 backdrop-blur-sm shadow-2xl p-7 flex flex-col"
-        initial={{ opacity: 0, rotateY: -20, rotateX: 10, y: 24 }}
-        animate={{ opacity: 1, rotateY: -7, rotateX: 4, y: 0 }}
-        whileHover={{ rotateY: -2, rotateX: 1, scale: 1.015 }}
-        transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
-        style={{ transformStyle: 'preserve-3d' }}
+        className="w-full rounded-3xl border border-border bg-card/80 backdrop-blur-sm shadow-2xl shadow-brand/5 p-8"
+        initial={{ opacity: 0, y: 30, rotateY: -5 }}
+        animate={{ opacity: 1, y: 0, rotateY: 0 }}
+        transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
+        style={{ perspective: '800px' }}
       >
-        {/* Header */}
-        <div className="flex items-start justify-between mb-8">
+        <div className="flex items-center justify-between mb-8">
           <div>
-            <p className="text-xs font-black uppercase tracking-widest text-muted-foreground mb-1.5">
-              Brand Growth
+            <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-2">
+              Brand Performance
             </p>
             <motion.p
-              className="text-4xl font-black text-foreground font-mono tabular-nums"
+              className="text-5xl font-black text-foreground tabular-nums"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.1, duration: 0.5 }}
@@ -153,35 +146,32 @@ function BrandGrowthVisual() {
             </motion.p>
           </div>
           <motion.div
-            className="w-12 h-12 rounded-2xl bg-brand/10 flex items-center justify-center"
+            className="w-14 h-14 rounded-2xl bg-brand/10 flex items-center justify-center"
             initial={{ scale: 0, rotate: -30 }}
             animate={{ scale: 1, rotate: 0 }}
-            transition={{ delay: 0.9, type: 'spring', stiffness: 220, damping: 14 }}
+            transition={{ delay: 0.8, type: 'spring', stiffness: 200, damping: 14 }}
           >
-            <TrendingUp className="w-6 h-6 text-brand" aria-hidden="true" />
+            <TrendingUp className="w-7 h-7 text-brand" aria-hidden="true" />
           </motion.div>
         </div>
 
-        {/* SVG Line Chart */}
-        <div aria-hidden="true">
-          <svg viewBox="0 0 300 100" className="w-full h-40" preserveAspectRatio="none">
+        <div aria-hidden="true" className="mb-6">
+          <svg viewBox="0 0 300 100" className="w-full h-36" preserveAspectRatio="none">
             <defs>
               <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="#0B57D0" stopOpacity="0.25" />
-                <stop offset="100%" stopColor="#0B57D0" stopOpacity="0.02" />
+                <stop offset="0%" stopColor="#0B57D0" stopOpacity="0.2" />
+                <stop offset="100%" stopColor="#0B57D0" stopOpacity="0.01" />
               </linearGradient>
             </defs>
-            {/* Area fill */}
             <motion.path
-              d={AREA_POINTS}
+              d="M0,88 C40,82 70,72 110,58 S160,38 200,26 S250,12 300,4 L300,100 L0,100 Z"
               fill="url(#areaGrad)"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.8 }}
             />
-            {/* Line */}
             <motion.path
-              d={LINE_POINTS}
+              d="M0,88 C40,82 70,72 110,58 S160,38 200,26 S250,12 300,4"
               fill="none"
               stroke="#0B57D0"
               strokeWidth="2.5"
@@ -194,64 +184,74 @@ function BrandGrowthVisual() {
                 opacity: { delay: 0.6, duration: 0.3 },
               }}
             />
-            {/* Dot markers */}
-            {DOT_POSITIONS.map(([cx, cy], i) => (
+            {([[110, 58], [200, 26], [300, 4]] as [number, number][]).map(([cx, cy], i) => (
               <motion.circle
                 key={i}
                 cx={cx}
                 cy={cy}
-                r="4"
+                r="4.5"
                 fill="#0B57D0"
                 stroke="white"
-                strokeWidth="1.5"
+                strokeWidth="2"
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
-                transition={{ delay: 0.9 + i * 0.25, type: 'spring', stiffness: 300, damping: 18 }}
+                transition={{ delay: 0.9 + i * 0.2, type: 'spring', stiffness: 300, damping: 18 }}
               />
             ))}
           </svg>
-          {/* Quarter labels */}
           <div className="flex justify-between px-1 -mt-1">
-            {Q_LABELS.map((q) => (
-              <span key={q} className="text-[11px] font-bold text-muted-foreground">{q}</span>
+            {['Q1', 'Q2', 'Q3', 'Q4'].map((q) => (
+              <span key={q} className="text-[11px] font-semibold text-muted-foreground">{q}</span>
             ))}
           </div>
         </div>
 
-        <div className="h-px bg-border mt-3" aria-hidden="true" />
+        <div className="h-px bg-border mb-6" aria-hidden="true" />
+
+        <div className="grid grid-cols-3 gap-4">
+          {metrics.map((m, i) => (
+            <motion.div
+              key={m.label}
+              className="text-center"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.4 + i * 0.15, duration: 0.4 }}
+            >
+              <m.icon className="w-4 h-4 text-brand mx-auto mb-1.5" aria-hidden="true" />
+              <p className="text-lg font-black text-foreground tabular-nums">{m.value}</p>
+              <p className="text-[10px] font-medium text-muted-foreground uppercase tracking-wider">{m.label}</p>
+            </motion.div>
+          ))}
+        </div>
       </motion.div>
 
-      {/* Floating metric cards */}
-      {statCards.map((card, i) => (
-        <motion.div
-          key={i}
-          className="absolute px-3.5 py-2.5 rounded-2xl bg-background/95 backdrop-blur-md border border-border shadow-lg whitespace-nowrap"
-          style={card.style}
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{
-            opacity: 1,
-            scale: 1,
-            y: [0, -8, 0],
-          }}
-          transition={{
-            opacity: { delay: card.delay, duration: 0.5 },
-            scale: {
-              delay: card.delay,
-              duration: 0.5,
-              ease: [0.16, 1, 0.3, 1] as [number, number, number, number],
-            },
-            y: {
-              delay: card.delay + 0.9,
-              duration: 2.8 + i * 0.5,
-              repeat: Infinity,
-              ease: 'easeInOut',
-            },
-          }}
-        >
-          <p className="text-sm font-black text-brand font-mono leading-none mb-0.5">{card.value}</p>
-          <p className="text-[11px] text-muted-foreground font-medium">{card.label}</p>
-        </motion.div>
-      ))}
+      <motion.div
+        className="absolute -top-4 -right-4 px-4 py-3 rounded-2xl bg-card border border-border shadow-lg"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1, y: [0, -6, 0] }}
+        transition={{
+          opacity: { delay: 1.6, duration: 0.5 },
+          scale: { delay: 1.6, duration: 0.5 },
+          y: { delay: 2.5, duration: 3, repeat: Infinity, ease: 'easeInOut' },
+        }}
+      >
+        <p className="text-sm font-black text-brand tabular-nums">10x ROI</p>
+        <p className="text-[10px] text-muted-foreground font-medium">Ad Returns</p>
+      </motion.div>
+
+      <motion.div
+        className="absolute -bottom-3 -left-3 px-4 py-3 rounded-2xl bg-card border border-border shadow-lg"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1, y: [0, -8, 0] }}
+        transition={{
+          opacity: { delay: 1.9, duration: 0.5 },
+          scale: { delay: 1.9, duration: 0.5 },
+          y: { delay: 3, duration: 3.5, repeat: Infinity, ease: 'easeInOut' },
+        }}
+      >
+        <p className="text-sm font-black text-brand tabular-nums">50+</p>
+        <p className="text-[10px] text-muted-foreground font-medium">Projects Delivered</p>
+      </motion.div>
     </div>
   );
 }
