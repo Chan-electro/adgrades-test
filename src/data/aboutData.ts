@@ -1,4 +1,4 @@
-import { Lightbulb, Eye, BarChart3, Heart } from "lucide-react";
+import { Lightbulb, Eye, ChartBar as BarChart3, Heart } from "lucide-react";
 
 export const milestones = [
   {
@@ -72,32 +72,11 @@ export const team = [
     linkedin: "https://www.linkedin.com/in/chandan-b-krishna-91562a279/",
   },
   {
-    name: "Maneesh C Gowda",
-    role: "CMO",
-    image: "/maneesh.jpg",
-    bio: "The creative spark behind AdGrades’ voice, Maneesh can turn data into stories and strategies into results usually before his coffee gets cold. He’s the mastermind who makes marketing feel like magic (with just a bit of math). If you’ve ever wondered how AdGrades always looks this good blame Maneesh.",
-    linkedin: "https://www.linkedin.com/in/maneesh-c-gowda-27942b258",
-  },
-  {
     name: "Likitesh Gowda B E",
     role: "COO",
     image: "/likit.jpeg",
     bio: "Likitesh is the one who makes sure everything behind the scenes at AdGrades runs smoothly. From managing day-to-day operations to keeping projects on track, he ensures the team is always aligned and focused. He's the kind of leader who makes complex processes feel simple and seamless.",
     linkedin: "http://linkedin.com/in/likiteshgowda",
-  },
-  {
-    name: "Ashish Gowda P",
-    role: "CDO - Chief Design Officer",
-    image: "/ashish.jpg",
-    bio: "Ashish is the creative eye at AdGrades, bringing ideas to life through pixel-perfect designs that not only look amazing—but actually drive results. From branding and UI/UX to ad creatives and everything in between, he makes sure every visual we deliver speaks the brand's language and connects with its audience.",
-    linkedin: "https://www.linkedin.com/in/ashish-gowda-a3542f546165h41531r865",
-  },
-  {
-    name: "Pavan B Krishna",
-    role: "Ads Manager",
-    image: "/pavan.jpg",
-    bio: "Pavan is the mind behind our high-performing ad campaigns. He plans, runs, and tracks ads that reach the right people at the right time. With a focus on results and smart spending, Pavan helps brands grow faster through creative, data-driven advertising that truly works.",
-    linkedin: "https://www.linkedin.com/in/pavan-bk-",
   },
   {
     name: "Harshith S",
@@ -107,31 +86,10 @@ export const team = [
     linkedin: "https://www.linkedin.com/in/harshith-s-895813266",
   },
   {
-    name: "Inchara D",
-    role: "Design Team Member",
-    image: "/inchara.jpg",
-    bio: "Inchara brings creative energy to every design she touches. With a keen eye for aesthetics and a passion for visual storytelling, she crafts designs that are both impactful and brand-aligned. Her fresh perspective helps AdGrades deliver visuals that stand out, connect emotionally, and leave a lasting impression.",
-    linkedin: "https://www.linkedin.com/in/inchara-gowda-252429258",
-  },
-  {
-    name: "Joyraj Roy",
-    role: "Digital Content & Media Lead",
-    image: "/joy.jpg",
-    bio: "Joy Raj Roy is the human shield between brands and the internet. He handles media, creates content, reads minds, decodes vague briefs like “make it premium but fun,” and survives on caffeine and last minute changes. He fights algorithms daily, explains for the 100th time why posting at 2 AM won’t magically go viral, and somehow delivers anyway. If a brand looks effortless online, it’s because Joy stressed enough for everyone. If something goes wrong, it was definitely “a learning experience.",
-    linkedin: "https://www.linkedin.com/in/suhas-reddy-598058388/",
-  },
-  {
     name: "Padmini SP",
     role: "Client Relations Manager & Lead Generation Head",
     image: "/padmini.jpg",
     bio: "Padmini SP is the voice, face, and charm of AdGrades. She can turn a cold lead into a warm friend before the first Google Meet ends. She keeps clients happy, leads flowing, and somehow manages it all with the calm of a zen master.",
     linkedin: "https://www.linkedin.com/in/sonica-bk-35a405395/",
-  },
-  {
-    name: "J A Dharma Sudeep",
-    role: "Quality Assurance Engineer & Agentic AI Developer",
-    image: "/Sudeep.jpeg",
-    bio: "Sudeep breaks things so you don’t have to. A QA perfectionist with an AI twist, he finds bugs faster than you can say “debug.” His mission: make every AdGrades system flawless and have a little fun doing it.",
-    linkedin: "https://www.linkedin.com/in/dharma-sudeep-244aa0253",
   },
 ];
