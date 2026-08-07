@@ -66,21 +66,21 @@ export const values = [
 export const team = [
   {
     name: "Chandan B Krishna",
-    role: "Founder, CEO",
+    role: "Founder",
     image: "/chandan.jpg",
     bio: "The brain (and occasional chaos coordinator) behind AdGrades, Chandan turns big ideas into bigger realities. Equal parts strategist, storyteller, and serial problem-solver, he’s on a mission to make AI not just smart but actually useful. When he’s not leading the charge, he’s probably brainstorming the next “impossible” thing the team will somehow build anyway.",
     linkedin: "https://www.linkedin.com/in/chandan-b-krishna-91562a279/",
   },
   {
     name: "Likitesh Gowda B E",
-    role: "COO",
+    role: "Marketing Manager",
     image: "/likit.jpeg",
     bio: "Likitesh is the one who makes sure everything behind the scenes at AdGrades runs smoothly. From managing day-to-day operations to keeping projects on track, he ensures the team is always aligned and focused. He's the kind of leader who makes complex processes feel simple and seamless.",
     linkedin: "http://linkedin.com/in/likiteshgowda",
   },
   {
     name: "Harshith S",
-    role: "Research and Development Head",
+    role: "Creative Handler",
     image: "/harshith.jpg",
     bio: "Harshith leads innovation at AdGrades with curiosity and sharp thinking. He dives deep into trends, tools, and strategies to keep us ahead of the curve. With a research-driven mindset, he turns insights into ideas that power growth, making sure every move we make is smart and future-ready.",
     linkedin: "https://www.linkedin.com/in/harshith-s-895813266",
